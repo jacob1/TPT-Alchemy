@@ -79,8 +79,17 @@ GameModel::GameModel():
 	int ngrav_enable = Client::Ref().GetPrefInteger("Simulation.NewtonianGravity", 0);
 	if (ngrav_enable)
 		sim->grav->start_grav_async();
-	sim->aheat_enable =  Client::Ref().GetPrefInteger("Simulation.AmbientHeat", 0);
-	sim->pretty_powder =  Client::Ref().GetPrefInteger("Simulation.PrettyPowder", 0);
+	sim->aheat_enable = Client::Ref().GetPrefInteger("Simulation.AmbientHeat", 0);
+	sim->pretty_powder = Client::Ref().GetPrefInteger("Simulation.PrettyPowder", 0);
+
+	tempArray = Client::Ref().GetPrefUIntegerArray("Simulation.ElementsAcquired");
+
+        if(tempArray.size())
+        {
+		for(int i = 0; i < tempArray.size(); i++) {
+			sim->elementsAcquired[i] = tempArray[i];
+		}
+	}
 
 	//Load favorites
 	std::vector<std::string> favoritesList = Client::Ref().GetPrefStringArray("Favorites");
@@ -156,6 +165,8 @@ GameModel::~GameModel()
 	Client::Ref().SetPref("Simulation.NewtonianGravity", sim->grav->ngrav_enable);
 	Client::Ref().SetPref("Simulation.AmbientHeat", sim->aheat_enable);
 	Client::Ref().SetPref("Simulation.PrettyPowder", sim->pretty_powder);
+
+	Client::Ref().SetPref("Simulation.ElementsAcquired", std::vector<Json::Value>(sim->elementsAcquired, sim->elementsAcquired + sizeof(sim->elementsAcquired)/sizeof(bool)));
 
 	Client::Ref().SetPref("Decoration.Red", (int)colour.Red);
 	Client::Ref().SetPref("Decoration.Green", (int)colour.Green);
@@ -289,10 +300,13 @@ void GameModel::BuildMenus()
 	}
 
 	//Build menu for GOL types
-	for(int i = 0; i < NGOL; i++)
-	{
-		Tool * tempTool = new ElementTool(PT_LIFE|(i<<8), sim->gmenu[i].name, std::string(sim->gmenu[i].description), PIXR(sim->gmenu[i].colour), PIXG(sim->gmenu[i].colour), PIXB(sim->gmenu[i].colour), "DEFAULT_PT_LIFE_"+std::string(sim->gmenu[i].name));
-		menuList[SC_LIFE]->AddTool(tempTool);
+
+	if (sim->elementsAcquired[PT_LIFE]) {
+		for(int i = 0; i < NGOL; i++)
+		{
+			Tool * tempTool = new ElementTool(PT_LIFE|(i<<8), sim->gmenu[i].name, std::string(sim->gmenu[i].description), PIXR(sim->gmenu[i].colour), PIXG(sim->gmenu[i].colour), PIXB(sim->gmenu[i].colour), "DEFAULT_PT_LIFE_"+std::string(sim->gmenu[i].name));
+			menuList[SC_LIFE]->AddTool(tempTool);
+		}
 	}
 
 	//Build other menus from wall data
@@ -606,10 +620,15 @@ void GameModel::SetSave(SaveInfo * newSave)
 		sim->legacy_enable = saveData->legacyEnable;
 		sim->water_equal_test = saveData->waterEEnabled;
 		sim->aheat_enable = saveData->aheatEnable;
+
+		// TODO allow for local saves to be loaded with this setting enabled
+		sim->ignoreElementAcquistion = true;
+
 		if(saveData->gravityEnable)
 			sim->grav->start_grav_async();
 		else
 			sim->grav->stop_grav_async();
+
 		sim->clear_sim();
 		ren->ClearAccumulation();
 		sim->Load(saveData);
@@ -919,6 +938,7 @@ void GameModel::ClearSimulation()
 	sim->air->airMode = 0;
 	sim->legacy_enable = false;
 	sim->water_equal_test = false;
+	sim->ignoreElementAcquistion = false;
 	sim->SetEdgeMode(edgeMode);
 
 	sim->clear_sim();

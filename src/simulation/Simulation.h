@@ -116,6 +116,7 @@ public:
 	int sandcolour;
 	int sandcolour_frame;
 	int DEFAULT_PT_NUM;
+	bool ignoreElementAcquistion;
 
 	int Load(GameSave * save);
 	int Load(int x, int y, GameSave * save);
