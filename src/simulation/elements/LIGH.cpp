@@ -133,6 +133,9 @@ int Element_LIGH::update(UPDATE_FUNC_ARGS)
 					if (sim->player2.elem!=PT_LIGH)
 						parts[r>>8].life-=powderful/100;
 					break;
+				case PT_O2:
+					sim->create_part(r>>8, x+rx, y+ry, PT_THDR);
+					break;
 				default:
 					break;
 				}
