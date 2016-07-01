@@ -130,7 +130,12 @@ int Element_NEUT::update(UPDATE_FUNC_ARGS)
 					break;
 				case PT_PLNT:
 					if (!(rand()%20))
-						sim->create_part(r>>8, x+rx, y+ry, PT_WOOD);
+					{
+						if(!((r>>8)%100))
+							sim->create_part(r>>8, x+rx, y+ry, PT_VINE);
+						else
+							sim->create_part(r>>8, x+rx, y+ry, PT_WOOD);
+					}
 					break;
 				case PT_DESL:
 				case PT_OIL:

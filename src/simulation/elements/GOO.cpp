@@ -56,6 +56,20 @@ int Element_GOO::update(UPDATE_FUNC_ARGS)
 		parts[i].vx += ADVECTION*sim->vx[y/CELL][x/CELL];
 		parts[i].vy += ADVECTION*sim->vy[y/CELL][x/CELL];
 	}
+
+	int r, rx, ry;
+	for (rx=-1; rx<2; rx++)
+		for (ry=-1; ry<2; ry++)
+			if (BOUNDS_CHECK && (rx || ry))
+			{
+				r = pmap[y+ry][x+rx];
+				if(!r)
+					continue;
+
+				if(parts[i].type == PT_GOO && (r&0xFF) == PT_WATR && !(i%20))
+					sim->create_part(i, x, y, PT_PLNT);
+			}
+
 	return 0;
 }
 

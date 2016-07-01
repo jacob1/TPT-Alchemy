@@ -41,7 +41,42 @@ Element_SAND::Element_SAND()
 	HighTemperature = 1973.0f;
 	HighTemperatureTransition = PT_LAVA;
 
-	Update = NULL;
+	Update = &Element_SAND::update;
+}
+
+//#TPT-Directive ElementHeader Element_SAND static int update(UPDATE_FUNC_ARGS)
+int Element_SAND::update(UPDATE_FUNC_ARGS)
+{
+	int r, rx, ry;
+	int dustc = 0, watrc = 0;
+	int dustid, watrid;
+
+	for (rx=-1; rx<2; rx++)
+		for (ry=-1; ry<2; ry++)
+			if (BOUNDS_CHECK && (rx || ry))
+			{
+				r = pmap[y+ry][x+rx];
+				if(!r)
+					continue;
+
+				if((r&0xFF) == PT_DUST)
+				{
+					dustc++;
+					dustid = r>>8;
+				}
+				if((r&0xFF) == PT_WATR)
+				{
+					watrc++;
+					watrid = r>>8;
+				}
+			}
+
+	if(dustc && watrc)
+	{
+		sim->create_part(i, x, y, PT_GOO);
+		sim->kill_part(dustid);
+		sim->kill_part(watrid);
+	}
 }
 
 Element_SAND::~Element_SAND() {}

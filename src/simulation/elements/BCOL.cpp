@@ -34,8 +34,8 @@ Element_BCOL::Element_BCOL()
 
 	LowPressure = IPL;
 	LowPressureTransition = NT;
-	HighPressure = IPH;
-	HighPressureTransition = NT;
+	HighPressure = 100;
+	HighPressureTransition = PT_DMND;
 	LowTemperature = ITL;
 	LowTemperatureTransition = NT;
 	HighTemperature = ITH;

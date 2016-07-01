@@ -50,6 +50,9 @@ int Element_WOOD::update(UPDATE_FUNC_ARGS)
 {
 	if (parts[i].temp > 450 && parts[i].temp > parts[i].tmp)
 		parts[i].tmp = (int)parts[i].temp;
+
+	if (parts[i].temp > 800 && !(i%10))
+		sim->create_part(i, x, y, PT_COAL);
 	return 0;
 }
 //#TPT-Directive ElementHeader Element_WOOD static int graphics(GRAPHICS_FUNC_ARGS)
