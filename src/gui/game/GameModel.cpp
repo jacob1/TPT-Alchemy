@@ -617,10 +617,15 @@ void GameModel::SetSave(SaveInfo * newSave)
 		sim->legacy_enable = saveData->legacyEnable;
 		sim->water_equal_test = saveData->waterEEnabled;
 		sim->aheat_enable = saveData->aheatEnable;
+
+		// TODO allow for local saves to be loaded with this setting enabled
+		sim->ignoreElementAcquistion = true;
+
 		if(saveData->gravityEnable)
 			sim->grav->start_grav_async();
 		else
 			sim->grav->stop_grav_async();
+
 		sim->clear_sim();
 		ren->ClearAccumulation();
 		sim->Load(saveData);
@@ -930,6 +935,7 @@ void GameModel::ClearSimulation()
 	sim->air->airMode = 0;
 	sim->legacy_enable = false;
 	sim->water_equal_test = false;
+	sim->ignoreElementAcquistion = false;
 	sim->SetEdgeMode(edgeMode);
 
 	sim->clear_sim();

@@ -5073,7 +5073,7 @@ void Simulation::ElementAcquired(int type)
 	std::stringstream messageStream;
 
 	// TODO add craftable elements
-	if (!elementsAcquired[type] && elementCount[type] >= 10) {
+	if (!elementsAcquired[type] && elementCount[type] >= 10 && !ignoreElementAcquistion) {
                 elementsAcquired[type] = true;
                 elements[type].MenuVisible = 1;
 		GetGameController()->GetModel()->BuildMenus();
