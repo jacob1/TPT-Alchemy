@@ -51,9 +51,8 @@ int Element_LAVA::update(UPDATE_FUNC_ARGS)
 	if(parts[i].ctype == PT_STNE && (parts[i].temp >= 1500 + O_CELS) && i%10 == 0)
 	{
 		parts[i].ctype = PT_IRON;
+		Element_FIRE::update(UPDATE_FUNC_SUBCALL_ARGS);
 	}
-	//else
-	//	Element_FIRE::update(UPDATE_FUNC_SUBCALL_ARGS);
 }
 
 //#TPT-Directive ElementHeader Element_LAVA static int graphics(GRAPHICS_FUNC_ARGS)
