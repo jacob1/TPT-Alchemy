@@ -52,8 +52,8 @@ int Element_LAVA::update(UPDATE_FUNC_ARGS)
 	{
 		parts[i].ctype = PT_IRON;
 	}
-	else
-		Element_FIRE::update(UPDATE_FUNC_SUBCALL_ARGS);
+	//else
+	//	Element_FIRE::update(UPDATE_FUNC_SUBCALL_ARGS);
 }
 
 //#TPT-Directive ElementHeader Element_LAVA static int graphics(GRAPHICS_FUNC_ARGS)
