@@ -5073,13 +5073,13 @@ void Simulation::ElementAcquired(int type)
 	std::stringstream messageStream;
 
 	if (!elementsAcquired[type] && !ignoreElementAcquistion && (elementCount[type] >= 10 || 
-				(elements[type].MenuSection == SC_ELEC && type != PT_METL && type != PT_TTAN) ||
+				(elements[type].MenuSection == SC_ELEC && type != PT_METL && type != PT_TUNG) ||
 				elements[type].MenuSection == SC_POWERED ||
 			       	elements[type].MenuSection == SC_SENSOR ||
 			       	elements[type].MenuSection == SC_FORCE ||
 			       	elements[type].MenuSection == SC_CRACKER ||
 			       	elements[type].MenuSection == SC_CRACKER2 ||
-			       	elements[type].MenuSection == SC_SPECIAL ||
+			       	(elements[type].MenuSection == SC_SPECIAL && type != PT_DMND) ||
 				type == PT_LIFE || type == PT_GBMB)) 
 	{
                 elementsAcquired[type] = true;
