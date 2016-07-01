@@ -345,7 +345,7 @@ void GameModel::BuildMenus()
 	decoToolset[3] = GetToolFromIdentifier("DEFAULT_PT_NONE");
 
 	//Set default tools
-	regularToolset[0] = GetToolFromIdentifier("DEFAULT_PT_DUST");
+	regularToolset[0] = GetToolFromIdentifier("DEFAULT_PT_WATR");
 	regularToolset[1] = GetToolFromIdentifier("DEFAULT_PT_NONE");
 	regularToolset[2] = GetToolFromIdentifier("DEFAULT_UI_SAMPLE");
 	regularToolset[3] = GetToolFromIdentifier("DEFAULT_PT_NONE");
