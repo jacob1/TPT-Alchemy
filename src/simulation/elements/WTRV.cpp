@@ -61,6 +61,12 @@ int Element_WTRV::update(UPDATE_FUNC_ARGS)
 					parts[i].life = 4;
 					parts[i].ctype = PT_WATR;
 				}
+
+				if((r&0xFF) == PT_LAVA && parts[r>>8].ctype == PT_SALT && !(rand()%5))
+					sim->create_part(i, x, y, PT_ACID);
+
+				if((r&0xFF) == PT_WTRV && (fabs(parts[i].vx-parts[r>>8].vx) + fabs(parts[i].vy-parts[r>>8].vy)) >= 10 && !(rand()%50))
+					sim->create_part(i, x, y, PT_LIGH);
 			}
 	if(parts[i].temp>1273&&parts[i].ctype==PT_FIRE)
 		parts[i].temp-=parts[i].temp/1000;
