@@ -243,6 +243,10 @@ void GameModel::BuildMenus()
 	if(regularToolset[3])
 		activeToolIdentifiers[3] = regularToolset[3]->GetIdentifier();
 
+	for (int i=0; i < PT_NUM; i++) {
+		sim->elements[i].MenuVisible = sim->elementsAcquired[i]?1:0;
+	}
+
 	//Empty current menus
 	for(std::vector<Menu*>::iterator iter = menuList.begin(), end = menuList.end(); iter != end; ++iter)
 	{
