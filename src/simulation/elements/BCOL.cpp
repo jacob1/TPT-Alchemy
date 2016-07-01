@@ -5,7 +5,7 @@ Element_BCOL::Element_BCOL()
 	Identifier = "DEFAULT_PT_BCOL";
 	Name = "BCOL";
 	Colour = PIXPACK(0x333333);
-	MenuVisible = 1;
+	MenuVisible = 0;
 	MenuSection = SC_POWDERS;
 	Enabled = 1;
 

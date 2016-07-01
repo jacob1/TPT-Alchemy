@@ -5,7 +5,7 @@ Element_DUST::Element_DUST()
 	Identifier = "DEFAULT_PT_DUST";
 	Name = "DUST";
 	Colour = PIXPACK(0xFFE0A0);
-	MenuVisible = 1;
+	MenuVisible = 0;
 	MenuSection = SC_POWDERS;
 	Enabled = 1;
 

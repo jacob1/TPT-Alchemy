@@ -5,7 +5,7 @@ Element_EXOT::Element_EXOT()
 	Identifier = "DEFAULT_PT_EXOT";
 	Name = "EXOT";
 	Colour = PIXPACK(0x247BFE);
-	MenuVisible = 1;
+	MenuVisible = 0;
 	MenuSection = SC_NUCLEAR;
 	Enabled = 1;
 

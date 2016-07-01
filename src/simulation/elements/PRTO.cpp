@@ -5,7 +5,7 @@ Element_PRTO::Element_PRTO()
 	Identifier = "DEFAULT_PT_PRTO";
 	Name = "PRTO";
 	Colour = PIXPACK(0x0020EB);
-	MenuVisible = 1;
+	MenuVisible = 0;
 	MenuSection = SC_SPECIAL;
 	Enabled = 1;
 

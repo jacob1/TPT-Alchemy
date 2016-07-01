@@ -5,7 +5,7 @@ Element_GLAS::Element_GLAS()
 	Identifier = "DEFAULT_PT_GLAS";
 	Name = "GLAS";
 	Colour = PIXPACK(0x404040);
-	MenuVisible = 1;
+	MenuVisible = 0;
 	MenuSection = SC_SOLIDS;
 	Enabled = 1;
 

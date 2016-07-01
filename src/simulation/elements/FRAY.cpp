@@ -5,7 +5,7 @@ Element_FRAY::Element_FRAY()
 	Identifier = "DEFAULT_PT_FRAY";
 	Name = "FRAY";
 	Colour = PIXPACK(0x00BBFF);
-	MenuVisible = 1;
+	MenuVisible = 0;
 	MenuSection = SC_FORCE;
 	Enabled = 1;
 

@@ -5,7 +5,7 @@ Element_FOG::Element_FOG()
 	Identifier = "DEFAULT_PT_FOG";
 	Name = "FOG";
 	Colour = PIXPACK(0xAAAAAA);
-	MenuVisible = 1;
+	MenuVisible = 0;
 	MenuSection = SC_GAS;
 	Enabled = 1;
 

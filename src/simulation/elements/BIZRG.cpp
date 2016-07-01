@@ -5,7 +5,7 @@ Element_BIZRG::Element_BIZRG()
 	Identifier = "DEFAULT_PT_BIZRG";
 	Name = "BIZG";
 	Colour = PIXPACK(0x00FFBB);
-	MenuVisible = 1;
+	MenuVisible = 0;
 	MenuSection = SC_CRACKER2;
 	Enabled = 1;
 

@@ -5,7 +5,7 @@ Element_COAL::Element_COAL()
 	Identifier = "DEFAULT_PT_COAL";
 	Name = "COAL";
 	Colour = PIXPACK(0x222222);
-	MenuVisible = 1;
+	MenuVisible = 0;
 	MenuSection = SC_SOLIDS;
 	Enabled = 1;
 

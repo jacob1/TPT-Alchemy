@@ -5,7 +5,7 @@ Element_RPEL::Element_RPEL()
 	Identifier = "DEFAULT_PT_RPEL";
 	Name = "RPEL";
 	Colour = PIXPACK(0x99CC00);
-	MenuVisible = 1;
+	MenuVisible = 0;
 	MenuSection = SC_FORCE;
 	Enabled = 1;
 

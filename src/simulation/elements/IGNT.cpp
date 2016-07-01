@@ -5,7 +5,7 @@ Element_IGNT::Element_IGNT()
 	Identifier = "DEFAULT_PT_IGNT";
 	Name = "IGNC";
 	Colour = PIXPACK(0xC0B050);
-	MenuVisible = 1;
+	MenuVisible = 0;
 	MenuSection = SC_EXPLOSIVE;
 	Enabled = 1;
 

@@ -5,7 +5,7 @@ Element_WAX::Element_WAX()
 	Identifier = "DEFAULT_PT_WAX";
 	Name = "WAX";
 	Colour = PIXPACK(0xF0F0BB);
-	MenuVisible = 1;
+	MenuVisible = 0;
 	MenuSection = SC_SOLIDS;
 	Enabled = 1;
 

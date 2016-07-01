@@ -5,7 +5,7 @@ Element_ISOZ::Element_ISOZ()
 	Identifier = "DEFAULT_PT_ISOZ";
 	Name = "ISOZ";
 	Colour = PIXPACK(0xAA30D0);
-	MenuVisible = 1;
+	MenuVisible = 0;
 	MenuSection = SC_NUCLEAR;
 	Enabled = 1;
 

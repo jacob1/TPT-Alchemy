@@ -5,7 +5,7 @@ Element_NBHL::Element_NBHL()
 	Identifier = "DEFAULT_PT_NBHL";
 	Name = "BHOL";
 	Colour = PIXPACK(0x202020);
-	MenuVisible = 1;
+	MenuVisible = 0;
 	MenuSection = SC_SPECIAL;
 	Enabled = 1;
 

@@ -5,7 +5,7 @@ Element_INWR::Element_INWR()
 	Identifier = "DEFAULT_PT_INWR";
 	Name = "INWR";
 	Colour = PIXPACK(0x544141);
-	MenuVisible = 1;
+	MenuVisible = 0;
 	MenuSection = SC_ELEC;
 	Enabled = 1;
 

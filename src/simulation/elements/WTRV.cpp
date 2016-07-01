@@ -5,7 +5,7 @@ Element_WTRV::Element_WTRV()
 	Identifier = "DEFAULT_PT_WTRV";
 	Name = "WTRV";
 	Colour = PIXPACK(0xA0A0FF);
-	MenuVisible = 1;
+	MenuVisible = 0;
 	MenuSection = SC_GAS;
 	Enabled = 1;
 

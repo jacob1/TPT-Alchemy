@@ -5,7 +5,7 @@ Element_VINE::Element_VINE()
 	Identifier = "DEFAULT_PT_VINE";
 	Name = "VINE";
 	Colour = PIXPACK(0x079A00);
-	MenuVisible = 1;
+	MenuVisible = 0;
 	MenuSection = SC_SOLIDS;
 	Enabled = 1;
 

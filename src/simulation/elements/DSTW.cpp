@@ -5,7 +5,7 @@ Element_DSTW::Element_DSTW()
 	Identifier = "DEFAULT_PT_DSTW";
 	Name = "DSTW";
 	Colour = PIXPACK(0x1020C0);
-	MenuVisible = 1;
+	MenuVisible = 0;
 	MenuSection = SC_LIQUID;
 	Enabled = 1;
 

@@ -5,7 +5,7 @@ Element_BIZR::Element_BIZR()
 	Identifier = "DEFAULT_PT_BIZR";
 	Name = "BIZR";
 	Colour = PIXPACK(0x00FF77);
-	MenuVisible = 1;
+	MenuVisible = 0;
 	MenuSection = SC_LIQUID;
 	Enabled = 1;
 

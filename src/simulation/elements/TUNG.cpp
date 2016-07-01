@@ -6,7 +6,7 @@ Element_TUNG::Element_TUNG()
 	Identifier = "DEFAULT_PT_TUNG";
 	Name = "TUNG";
 	Colour = PIXPACK(0x505050);
-	MenuVisible = 1;
+	MenuVisible = 0;
 	MenuSection = SC_ELEC;
 	Enabled = 1;
 

@@ -7,7 +7,7 @@ Element_ETRD::Element_ETRD()
 	Identifier = "DEFAULT_PT_ETRD";
 	Name = "ETRD";
 	Colour = PIXPACK(0x404040);
-	MenuVisible = 1;
+	MenuVisible = 0;
 	MenuSection = SC_ELEC;
 	Enabled = 1;
 

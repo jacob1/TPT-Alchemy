@@ -5,7 +5,7 @@ Element_PUMP::Element_PUMP()
 	Identifier = "DEFAULT_PT_PUMP";
 	Name = "PUMP";
 	Colour = PIXPACK(0x0A0A3B);
-	MenuVisible = 1;
+	MenuVisible = 0;
 	MenuSection = SC_POWERED;
 	Enabled = 1;
 

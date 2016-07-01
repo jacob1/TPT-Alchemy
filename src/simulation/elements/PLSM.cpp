@@ -5,7 +5,7 @@ Element_PLSM::Element_PLSM()
 	Identifier = "DEFAULT_PT_PLSM";
 	Name = "PLSM";
 	Colour = PIXPACK(0xBB99FF);
-	MenuVisible = 1;
+	MenuVisible = 0;
 	MenuSection = SC_GAS;
 	Enabled = 1;
 

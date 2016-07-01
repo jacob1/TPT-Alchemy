@@ -5,7 +5,7 @@ Element_QRTZ::Element_QRTZ()
 	Identifier = "DEFAULT_PT_QRTZ";
 	Name = "QRTZ";
 	Colour = PIXPACK(0xAADDDD);
-	MenuVisible = 1;
+	MenuVisible = 0;
 	MenuSection = SC_SOLIDS;
 	Enabled = 1;
 

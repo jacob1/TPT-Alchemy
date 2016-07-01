@@ -5,7 +5,7 @@ Element_OIL::Element_OIL()
 	Identifier = "DEFAULT_PT_OIL";
 	Name = "OIL";
 	Colour = PIXPACK(0x404010);
-	MenuVisible = 1;
+	MenuVisible = 0;
 	MenuSection = SC_LIQUID;
 	Enabled = 1;
 

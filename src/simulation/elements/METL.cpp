@@ -5,7 +5,7 @@ Element_METL::Element_METL()
 	Identifier = "DEFAULT_PT_METL";
 	Name = "METL";
 	Colour = PIXPACK(0x404060);
-	MenuVisible = 1;
+	MenuVisible = 0;
 	MenuSection = SC_ELEC;
 	Enabled = 1;
 

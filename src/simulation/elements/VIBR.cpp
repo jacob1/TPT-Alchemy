@@ -5,7 +5,7 @@ Element_VIBR::Element_VIBR()
 	Identifier = "DEFAULT_PT_VIBR";
 	Name = "VIBR";
 	Colour = PIXPACK(0x005000);
-	MenuVisible = 1;
+	MenuVisible = 0;
 	MenuSection = SC_NUCLEAR;
 	Enabled = 1;
 

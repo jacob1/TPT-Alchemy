@@ -5,7 +5,7 @@ Element_URAN::Element_URAN()
 	Identifier = "DEFAULT_PT_URAN";
 	Name = "URAN";
 	Colour = PIXPACK(0x707020);
-	MenuVisible = 1;
+	MenuVisible = 0;
 	MenuSection = SC_NUCLEAR;
 	Enabled = 1;
 

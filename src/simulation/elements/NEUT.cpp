@@ -5,7 +5,7 @@ Element_NEUT::Element_NEUT()
 	Identifier = "DEFAULT_PT_NEUT";
 	Name = "NEUT";
 	Colour = PIXPACK(0x20E0FF);
-	MenuVisible = 1;
+	MenuVisible = 0;
 	MenuSection = SC_NUCLEAR;
 	Enabled = 1;
 

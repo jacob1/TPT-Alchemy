@@ -6,7 +6,7 @@ Element_LIGH::Element_LIGH()
 	Identifier = "DEFAULT_PT_LIGH";
 	Name = "LIGH";
 	Colour = PIXPACK(0xFFFFC0);
-	MenuVisible = 1;
+	MenuVisible = 0;
 	MenuSection = SC_EXPLOSIVE;
 	Enabled = 1;
 

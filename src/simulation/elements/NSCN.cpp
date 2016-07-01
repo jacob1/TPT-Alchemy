@@ -5,7 +5,7 @@ Element_NSCN::Element_NSCN()
 	Identifier = "DEFAULT_PT_NSCN";
 	Name = "NSCN";
 	Colour = PIXPACK(0x505080);
-	MenuVisible = 1;
+	MenuVisible = 0;
 	MenuSection = SC_ELEC;
 	Enabled = 1;
 

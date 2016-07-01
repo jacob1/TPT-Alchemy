@@ -5,7 +5,7 @@ Element_NBLE::Element_NBLE()
 	Identifier = "DEFAULT_PT_NBLE";
 	Name = "NBLE";
 	Colour = PIXPACK(0xEB4917);
-	MenuVisible = 1;
+	MenuVisible = 0;
 	MenuSection = SC_GAS;
 	Enabled = 1;
 

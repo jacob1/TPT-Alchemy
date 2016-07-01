@@ -9,7 +9,7 @@ Element_FIRW::Element_FIRW()
 	Identifier = "DEFAULT_PT_FIRW";
 	Name = "FIRW";
 	Colour = PIXPACK(0xFFA040);
-	MenuVisible = 1;
+	MenuVisible = 0;
 	MenuSection = SC_EXPLOSIVE;
 	Enabled = 1;
 

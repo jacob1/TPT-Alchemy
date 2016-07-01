@@ -5,7 +5,7 @@ Element_PRTI::Element_PRTI()
 	Identifier = "DEFAULT_PT_PRTI";
 	Name = "PRTI";
 	Colour = PIXPACK(0xEB5917);
-	MenuVisible = 1;
+	MenuVisible = 0;
 	MenuSection = SC_SPECIAL;
 	Enabled = 1;
 

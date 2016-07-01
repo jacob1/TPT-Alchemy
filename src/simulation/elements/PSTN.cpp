@@ -5,7 +5,7 @@ Element_PSTN::Element_PSTN()
 	Identifier = "DEFAULT_PT_PSTN";
 	Name = "PSTN";
 	Colour = PIXPACK(0xAA9999);
-	MenuVisible = 1;
+	MenuVisible = 0;
 	MenuSection = SC_FORCE;
 	Enabled = 1;
 

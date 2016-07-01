@@ -5,7 +5,7 @@ Element_CRAY::Element_CRAY()
 	Identifier = "DEFAULT_PT_CRAY";
 	Name = "CRAY";
 	Colour = PIXPACK(0xBBFF00);
-	MenuVisible = 1;
+	MenuVisible = 0;
 	MenuSection = SC_ELEC;
 	Enabled = 1;
 

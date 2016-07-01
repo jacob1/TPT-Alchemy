@@ -5,7 +5,7 @@ Element_BGLA::Element_BGLA()
 	Identifier = "DEFAULT_PT_BGLA";
 	Name = "BGLA";
 	Colour = PIXPACK(0x606060);
-	MenuVisible = 1;
+	MenuVisible = 0;
 	MenuSection = SC_POWDERS;
 	Enabled = 1;
 

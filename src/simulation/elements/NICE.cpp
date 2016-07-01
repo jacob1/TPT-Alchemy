@@ -5,7 +5,7 @@ Element_NICE::Element_NICE()
 	Identifier = "DEFAULT_PT_NICE";
 	Name = "NICE";
 	Colour = PIXPACK(0xC0E0FF);
-	MenuVisible = 1;
+	MenuVisible = 0;
 	MenuSection = SC_SOLIDS;
 	Enabled = 1;
 

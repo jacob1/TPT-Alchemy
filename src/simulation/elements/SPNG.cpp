@@ -5,7 +5,7 @@ Element_SPNG::Element_SPNG()
 	Identifier = "DEFAULT_PT_SPNG";
 	Name = "SPNG";
 	Colour = PIXPACK(0xFFBE30);
-	MenuVisible = 1;
+	MenuVisible = 0;
 	MenuSection = SC_SOLIDS;
 	Enabled = 1;
 

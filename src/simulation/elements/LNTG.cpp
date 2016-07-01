@@ -5,7 +5,7 @@ Element_LNTG::Element_LNTG()
 	Identifier = "DEFAULT_PT_LNTG";
 	Name = "LN2";
 	Colour = PIXPACK(0x80A0DF);
-	MenuVisible = 1;
+	MenuVisible = 0;
 	MenuSection = SC_LIQUID;
 	Enabled = 1;
 

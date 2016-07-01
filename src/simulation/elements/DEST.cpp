@@ -5,7 +5,7 @@ Element_DEST::Element_DEST()
 	Identifier = "DEFAULT_PT_DEST";
 	Name = "DEST";
 	Colour = PIXPACK(0xFF3311);
-	MenuVisible = 1;
+	MenuVisible = 0;
 	MenuSection = SC_EXPLOSIVE;
 	Enabled = 1;
 

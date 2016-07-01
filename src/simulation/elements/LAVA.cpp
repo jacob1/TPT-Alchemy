@@ -5,7 +5,7 @@ Element_LAVA::Element_LAVA()
 	Identifier = "DEFAULT_PT_LAVA";
 	Name = "LAVA";
 	Colour = PIXPACK(0xE05010);
-	MenuVisible = 1;
+	MenuVisible = 0;
 	MenuSection = SC_LIQUID;
 	Enabled = 1;
 

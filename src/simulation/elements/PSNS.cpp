@@ -5,7 +5,7 @@ Element_PSNS::Element_PSNS()
 	Identifier = "DEFAULT_PT_PSNS";
 	Name = "PSNS";
 	Colour = PIXPACK(0xDB2020);
-	MenuVisible = 1;
+	MenuVisible = 0;
 	MenuSection = SC_SENSOR;
 	Enabled = 1;
 

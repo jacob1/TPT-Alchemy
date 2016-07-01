@@ -5,7 +5,7 @@ Element_GAS::Element_GAS()
 	Identifier = "DEFAULT_PT_GAS";
 	Name = "GAS";
 	Colour = PIXPACK(0xE0FF20);
-	MenuVisible = 1;
+	MenuVisible = 0;
 	MenuSection = SC_GAS;
 	Enabled = 1;
 

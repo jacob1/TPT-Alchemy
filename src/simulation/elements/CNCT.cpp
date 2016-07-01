@@ -5,7 +5,7 @@ Element_CNCT::Element_CNCT()
 	Identifier = "DEFAULT_PT_CNCT";
 	Name = "CNCT";
 	Colour = PIXPACK(0xC0C0C0);
-	MenuVisible = 1;
+	MenuVisible = 0;
 	MenuSection = SC_POWDERS;
 	Enabled = 1;
 

@@ -5,7 +5,7 @@ Element_DCEL::Element_DCEL()
 	Identifier = "DEFAULT_PT_DCEL";
 	Name = "DCEL";
 	Colour = PIXPACK(0x99CC00);
-	MenuVisible = 1;
+	MenuVisible = 0;
 	MenuSection = SC_FORCE;
 	Enabled = 1;
 

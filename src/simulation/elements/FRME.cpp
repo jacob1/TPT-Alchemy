@@ -5,7 +5,7 @@ Element_FRME::Element_FRME()
 	Identifier = "DEFAULT_PT_FRME";
 	Name = "FRME";
 	Colour = PIXPACK(0x999988);
-	MenuVisible = 1;
+	MenuVisible = 0;
 	MenuSection = SC_FORCE;
 	Enabled = 1;
 

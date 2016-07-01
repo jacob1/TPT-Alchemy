@@ -5,7 +5,7 @@ Element_WIRE::Element_WIRE()
 	Identifier = "DEFAULT_PT_WIRE";
 	Name = "WWLD";
 	Colour = PIXPACK(0xFFCC00);
-	MenuVisible = 1;
+	MenuVisible = 0;
 	MenuSection = SC_ELEC;
 	Enabled = 1;
 

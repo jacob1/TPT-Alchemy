@@ -5,7 +5,7 @@ Element_BRMT::Element_BRMT()
 	Identifier = "DEFAULT_PT_BRMT";
 	Name = "BRMT";
 	Colour = PIXPACK(0x705060);
-	MenuVisible = 1;
+	MenuVisible = 0;
 	MenuSection = SC_POWDERS;
 	Enabled = 1;
 

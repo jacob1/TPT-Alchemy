@@ -5,7 +5,7 @@ Element_ACID::Element_ACID()
 	Identifier = "DEFAULT_PT_ACID";
 	Name = "ACID";
 	Colour = PIXPACK(0xED55FF);
-	MenuVisible = 1;
+	MenuVisible = 0;
 	MenuSection = SC_LIQUID;
 	Enabled = 1;
 

@@ -5,7 +5,7 @@ Element_YEST::Element_YEST()
 	Identifier = "DEFAULT_PT_YEST";
 	Name = "YEST";
 	Colour = PIXPACK(0xEEE0C0);
-	MenuVisible = 1;
+	MenuVisible = 0;
 	MenuSection = SC_POWDERS;
 	Enabled = 1;
 

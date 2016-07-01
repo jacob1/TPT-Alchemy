@@ -5,7 +5,7 @@ Element_FRZW::Element_FRZW()
 	Identifier = "DEFAULT_PT_FRZW";
 	Name = "FRZW";
 	Colour = PIXPACK(0x1020C0);
-	MenuVisible = 1;
+	MenuVisible = 0;
 	MenuSection = SC_CRACKER2;
 	Enabled = 1;
 

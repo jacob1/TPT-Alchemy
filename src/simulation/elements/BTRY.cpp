@@ -5,7 +5,7 @@ Element_BTRY::Element_BTRY()
 	Identifier = "DEFAULT_PT_BTRY";
 	Name = "BTRY";
 	Colour = PIXPACK(0x858505);
-	MenuVisible = 1;
+	MenuVisible = 0;
 	MenuSection = SC_ELEC;
 	Enabled = 1;
 

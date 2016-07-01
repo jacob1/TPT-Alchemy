@@ -5,7 +5,7 @@ Element_PROT::Element_PROT()
 	Identifier = "DEFAULT_PT_PROT";
 	Name = "PROT";
 	Colour = PIXPACK(0x990000);
-	MenuVisible = 1;
+	MenuVisible = 0;
 	MenuSection = SC_NUCLEAR;
 	Enabled = 1;
 

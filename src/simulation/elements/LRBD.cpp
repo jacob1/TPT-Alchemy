@@ -5,7 +5,7 @@ Element_LRBD::Element_LRBD()
 	Identifier = "DEFAULT_PT_LRBD";
 	Name = "LRBD";
 	Colour = PIXPACK(0xAAAAAA);
-	MenuVisible = 1;
+	MenuVisible = 0;
 	MenuSection = SC_EXPLOSIVE;
 	Enabled = 1;
 

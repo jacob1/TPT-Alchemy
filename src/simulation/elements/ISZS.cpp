@@ -5,7 +5,7 @@ Element_ISZS::Element_ISZS()
 	Identifier = "DEFAULT_PT_ISZS";
 	Name = "ISZS";
 	Colour = PIXPACK(0x662089);
-	MenuVisible = 1;
+	MenuVisible = 0;
 	MenuSection = SC_NUCLEAR;
 	Enabled = 1;
 

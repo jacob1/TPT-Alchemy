@@ -5,7 +5,7 @@ Element_FILT::Element_FILT()
 	Identifier = "DEFAULT_PT_FILT";
 	Name = "FILT";
 	Colour = PIXPACK(0x000056);
-	MenuVisible = 1;
+	MenuVisible = 0;
 	MenuSection = SC_SOLIDS;
 	Enabled = 1;
 

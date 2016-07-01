@@ -5,7 +5,7 @@ Element_FWRK::Element_FWRK()
 	Identifier = "DEFAULT_PT_FWRK";
 	Name = "FWRK";
 	Colour = PIXPACK(0x666666);
-	MenuVisible = 1;
+	MenuVisible = 0;
 	MenuSection = SC_EXPLOSIVE;
 	Enabled = 1;
 

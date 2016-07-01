@@ -5,7 +5,7 @@ Element_DEUT::Element_DEUT()
 	Identifier = "DEFAULT_PT_DEUT";
 	Name = "DEUT";
 	Colour = PIXPACK(0x00153F);
-	MenuVisible = 1;
+	MenuVisible = 0;
 	MenuSection = SC_NUCLEAR;
 	Enabled = 1;
 

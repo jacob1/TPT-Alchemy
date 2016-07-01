@@ -5,7 +5,7 @@ Element_PBCN::Element_PBCN()
 	Identifier = "DEFAULT_PT_PBCN";
 	Name = "PBCN";
 	Colour = PIXPACK(0x3B1D0A);
-	MenuVisible = 1;
+	MenuVisible = 0;
 	MenuSection = SC_POWERED;
 	Enabled = 1;
 

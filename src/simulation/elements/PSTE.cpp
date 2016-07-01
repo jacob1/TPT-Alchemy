@@ -5,7 +5,7 @@ Element_PSTE::Element_PSTE()
 	Identifier = "DEFAULT_PT_PSTE";
 	Name = "PSTE";
 	Colour = PIXPACK(0xAA99AA);
-	MenuVisible = 1;
+	MenuVisible = 0;
 	MenuSection = SC_LIQUID;
 	Enabled = 1;
 

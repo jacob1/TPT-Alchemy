@@ -5,7 +5,7 @@ Element_ELEC::Element_ELEC()
 	Identifier = "DEFAULT_PT_ELEC";
 	Name = "ELEC";
 	Colour = PIXPACK(0xDFEFFF);
-	MenuVisible = 1;
+	MenuVisible = 0;
 	MenuSection = SC_NUCLEAR;
 	Enabled = 1;
 

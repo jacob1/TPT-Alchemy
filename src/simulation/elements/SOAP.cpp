@@ -5,7 +5,7 @@ Element_SOAP::Element_SOAP()
 	Identifier = "DEFAULT_PT_SOAP";
 	Name = "SOAP";
 	Colour = PIXPACK(0xF5F5DC);
-	MenuVisible = 1;
+	MenuVisible = 0;
 	MenuSection = SC_LIQUID;
 	Enabled = 1;
 

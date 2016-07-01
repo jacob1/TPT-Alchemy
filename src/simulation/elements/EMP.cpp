@@ -7,7 +7,7 @@ Element_EMP::Element_EMP()
 	Identifier = "DEFAULT_PT_EMP";
 	Name = "EMP";
 	Colour = PIXPACK(0x66AAFF);
-	MenuVisible = 1;
+	MenuVisible = 0;
 	MenuSection = SC_ELEC;
 	Enabled = 1;
 

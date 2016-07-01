@@ -5,7 +5,7 @@ Element_GUNP::Element_GUNP()
 	Identifier = "DEFAULT_PT_GUNP";
 	Name = "GUN";
 	Colour = PIXPACK(0xC0C0D0);
-	MenuVisible = 1;
+	MenuVisible = 0;
 	MenuSection = SC_EXPLOSIVE;
 	Enabled = 1;
 

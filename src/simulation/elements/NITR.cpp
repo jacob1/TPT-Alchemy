@@ -5,7 +5,7 @@ Element_NITR::Element_NITR()
 	Identifier = "DEFAULT_PT_NITR";
 	Name = "NITR";
 	Colour = PIXPACK(0x20E010);
-	MenuVisible = 1;
+	MenuVisible = 0;
 	MenuSection = SC_EXPLOSIVE;
 	Enabled = 1;
 

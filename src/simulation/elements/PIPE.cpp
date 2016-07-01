@@ -8,7 +8,7 @@ Element_PIPE::Element_PIPE()
 	Identifier = "DEFAULT_PT_PIPE";
 	Name = "PIPE";
 	Colour = PIXPACK(0x444444);
-	MenuVisible = 1;
+	MenuVisible = 0;
 	MenuSection = SC_FORCE;
 	Enabled = 1;
 

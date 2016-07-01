@@ -5,7 +5,7 @@ Element_DMND::Element_DMND()
 	Identifier = "DEFAULT_PT_DMND";
 	Name = "DMND";
 	Colour = PIXPACK(0xCCFFFF);
-	MenuVisible = 1;
+	MenuVisible = 0;
 	MenuSection = SC_SPECIAL;
 	Enabled = 1;
 

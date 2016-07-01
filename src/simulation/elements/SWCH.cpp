@@ -5,7 +5,7 @@ Element_SWCH::Element_SWCH()
 	Identifier = "DEFAULT_PT_SWCH";
 	Name = "SWCH";
 	Colour = PIXPACK(0x103B11);
-	MenuVisible = 1;
+	MenuVisible = 0;
 	MenuSection = SC_ELEC;
 	Enabled = 1;
 

@@ -5,7 +5,7 @@ Element_ICEI::Element_ICEI()
 	Identifier = "DEFAULT_PT_ICEI";
 	Name = "ICE";
 	Colour = PIXPACK(0xA0C0FF);
-	MenuVisible = 1;
+	MenuVisible = 0;
 	MenuSection = SC_SOLIDS;
 	Enabled = 1;
 

@@ -5,7 +5,7 @@ Element_SING::Element_SING()
 	Identifier = "DEFAULT_PT_SING";
 	Name = "SING";
 	Colour = PIXPACK(0x242424);
-	MenuVisible = 1;
+	MenuVisible = 0;
 	MenuSection = SC_NUCLEAR;
 	Enabled = 1;
 

@@ -5,7 +5,7 @@ Element_PHOT::Element_PHOT()
 	Identifier = "DEFAULT_PT_PHOT";
 	Name = "PHOT";
 	Colour = PIXPACK(0xFFFFFF);
-	MenuVisible = 1;
+	MenuVisible = 0;
 	MenuSection = SC_NUCLEAR;
 	Enabled = 1;
 

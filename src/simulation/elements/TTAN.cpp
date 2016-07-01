@@ -6,7 +6,7 @@ Element_TTAN::Element_TTAN()
 	Identifier = "DEFAULT_PT_TTAN";
 	Name = "TTAN";
 	Colour = PIXPACK(0x909090);
-	MenuVisible = 1;
+	MenuVisible = 0;
 	MenuSection = SC_SOLIDS;
 	Enabled = 1;
 

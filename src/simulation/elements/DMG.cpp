@@ -5,7 +5,7 @@ Element_DMG::Element_DMG()
 	Identifier = "DEFAULT_PT_DMG";
 	Name = "DMG";
 	Colour = PIXPACK(0x88FF88);
-	MenuVisible = 1;
+	MenuVisible = 0;
 	MenuSection = SC_FORCE;
 	Enabled = 1;
 

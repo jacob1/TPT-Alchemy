@@ -5,7 +5,7 @@ Element_LOVE::Element_LOVE()
 	Identifier = "DEFAULT_PT_LOVE";
 	Name = "LOVE";
 	Colour = PIXPACK(0xFF30FF);
-	MenuVisible = 1;
+	MenuVisible = 0;
 	MenuSection = SC_CRACKER2;
 	Enabled = 1;
 

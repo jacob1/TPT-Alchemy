@@ -5,7 +5,7 @@ Element_STOR::Element_STOR()
 	Identifier = "DEFAULT_PT_STOR";
 	Name = "STOR";
 	Colour = PIXPACK(0x50DFDF);
-	MenuVisible = 1;
+	MenuVisible = 0;
 	MenuSection = SC_POWERED;
 	Enabled = 1;
 

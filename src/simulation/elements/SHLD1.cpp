@@ -5,7 +5,7 @@ Element_SHLD1::Element_SHLD1()
 	Identifier = "DEFAULT_PT_SHLD1";
 	Name = "SHLD";
 	Colour = PIXPACK(0xAAAAAA);
-	MenuVisible = 1;
+	MenuVisible = 0;
 	MenuSection = SC_SOLIDS;
 	Enabled = 1;
 

@@ -5,7 +5,7 @@ Element_GBMB::Element_GBMB()
 	Identifier = "DEFAULT_PT_GBMB";
 	Name = "GBMB";
 	Colour = PIXPACK(0x1144BB);
-	MenuVisible = 1;
+	MenuVisible = 0;
 	MenuSection = SC_FORCE;
 	Enabled = 1;
 

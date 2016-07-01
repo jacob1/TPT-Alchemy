@@ -5,7 +5,7 @@ Element_BCLN::Element_BCLN()
 	Identifier = "DEFAULT_PT_BCLN";
 	Name = "BCLN";
 	Colour = PIXPACK(0xFFD040);
-	MenuVisible = 1;
+	MenuVisible = 0;
 	MenuSection = SC_SPECIAL;
 	Enabled = 1;
 

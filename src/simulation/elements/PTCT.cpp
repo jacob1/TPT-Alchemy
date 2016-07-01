@@ -5,7 +5,7 @@ Element_PTCT::Element_PTCT()
 	Identifier = "DEFAULT_PT_PTCT";
 	Name = "PTCT";
 	Colour = PIXPACK(0x405050);
-	MenuVisible = 1;
+	MenuVisible = 0;
 	MenuSection = SC_ELEC;
 	Enabled = 1;
 

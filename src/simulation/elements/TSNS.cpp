@@ -5,7 +5,7 @@ Element_TSNS::Element_TSNS()
 	Identifier = "DEFAULT_PT_TSNS";
 	Name = "TSNS";
 	Colour = PIXPACK(0xFD00D5);
-	MenuVisible = 1;
+	MenuVisible = 0;
 	MenuSection = SC_SENSOR;
 	Enabled = 1;
 

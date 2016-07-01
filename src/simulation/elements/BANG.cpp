@@ -5,7 +5,7 @@ Element_BANG::Element_BANG()
 	Identifier = "DEFAULT_PT_BANG";
 	Name = "TNT";
 	Colour = PIXPACK(0xC05050);
-	MenuVisible = 1;
+	MenuVisible = 0;
 	MenuSection = SC_EXPLOSIVE;
 	Enabled = 1;
 

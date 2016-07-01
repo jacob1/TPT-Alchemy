@@ -5,7 +5,7 @@ Element_FSEP::Element_FSEP()
 	Identifier = "DEFAULT_PT_FSEP";
 	Name = "FSEP";
 	Colour = PIXPACK(0x63AD5F);
-	MenuVisible = 1;
+	MenuVisible = 0;
 	MenuSection = SC_EXPLOSIVE;
 	Enabled = 1;
 

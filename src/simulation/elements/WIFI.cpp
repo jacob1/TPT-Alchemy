@@ -5,7 +5,7 @@ Element_WIFI::Element_WIFI()
 	Identifier = "DEFAULT_PT_WIFI";
 	Name = "WIFI";
 	Colour = PIXPACK(0x40A060);
-	MenuVisible = 1;
+	MenuVisible = 0;
 	MenuSection = SC_ELEC;
 	Enabled = 1;
 

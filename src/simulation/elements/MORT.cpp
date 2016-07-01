@@ -5,7 +5,7 @@ Element_MORT::Element_MORT()
 	Identifier = "DEFAULT_PT_MORT";
 	Name = "MORT";
 	Colour = PIXPACK(0xE0E0E0);
-	MenuVisible = 1;
+	MenuVisible = 0;
 	MenuSection = SC_CRACKER2;
 	Enabled = 1;
 

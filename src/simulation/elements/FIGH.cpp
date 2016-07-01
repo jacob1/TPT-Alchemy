@@ -5,7 +5,7 @@ Element_FIGH::Element_FIGH()
 	Identifier = "DEFAULT_PT_FIGH";
 	Name = "FIGH";
 	Colour = PIXPACK(0xFFE0A0);
-	MenuVisible = 1;
+	MenuVisible = 0;
 	MenuSection = SC_SPECIAL;
 	Enabled = 1;
 

@@ -5,7 +5,7 @@ Element_CAUS::Element_CAUS()
 	Identifier = "DEFAULT_PT_CAUS";
 	Name = "CAUS";
 	Colour = PIXPACK(0x80FFA0);
-	MenuVisible = 1;
+	MenuVisible = 0;
 	MenuSection = SC_GAS;
 	Enabled = 1;
 

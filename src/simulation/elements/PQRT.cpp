@@ -5,7 +5,7 @@ Element_PQRT::Element_PQRT()
 	Identifier = "DEFAULT_PT_PQRT";
 	Name = "PQRT";
 	Colour = PIXPACK(0x88BBBB);
-	MenuVisible = 1;
+	MenuVisible = 0;
 	MenuSection = SC_POWDERS;
 	Enabled = 1;
 

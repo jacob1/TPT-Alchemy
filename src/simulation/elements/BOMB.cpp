@@ -5,7 +5,7 @@ Element_BOMB::Element_BOMB()
 	Identifier = "DEFAULT_PT_BOMB";
 	Name = "BOMB";
 	Colour = PIXPACK(0xFFF288);
-	MenuVisible = 1;
+	MenuVisible = 0;
 	MenuSection = SC_EXPLOSIVE;
 	Enabled = 1;
 

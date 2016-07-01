@@ -5,7 +5,7 @@ Element_SALT::Element_SALT()
 	Identifier = "DEFAULT_PT_SALT";
 	Name = "SALT";
 	Colour = PIXPACK(0xFFFFFF);
-	MenuVisible = 1;
+	MenuVisible = 0;
 	MenuSection = SC_POWDERS;
 	Enabled = 1;
 

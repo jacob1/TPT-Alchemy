@@ -5,7 +5,7 @@ Element_H2::Element_H2()
 	Identifier = "DEFAULT_PT_H2";
 	Name = "HYGN";
 	Colour = PIXPACK(0x5070FF);
-	MenuVisible = 1;
+	MenuVisible = 0;
 	MenuSection = SC_GAS;
 	Enabled = 1;
 

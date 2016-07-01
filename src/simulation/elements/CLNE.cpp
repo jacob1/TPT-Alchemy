@@ -5,7 +5,7 @@ Element_CLNE::Element_CLNE()
 	Identifier = "DEFAULT_PT_CLNE";
 	Name = "CLNE";
 	Colour = PIXPACK(0xFFD010);
-	MenuVisible = 1;
+	MenuVisible = 0;
 	MenuSection = SC_SPECIAL;
 	Enabled = 1;
 

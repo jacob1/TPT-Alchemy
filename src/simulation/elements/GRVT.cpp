@@ -5,7 +5,7 @@ Element_GRVT::Element_GRVT()
 	Identifier = "DEFAULT_PT_GRVT";
 	Name = "GRVT";
 	Colour = PIXPACK(0x00EE76);
-	MenuVisible = 1;
+	MenuVisible = 0;
 	MenuSection = SC_NUCLEAR;
 	Enabled = 1;
 

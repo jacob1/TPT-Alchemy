@@ -5,7 +5,7 @@ Element_ARAY::Element_ARAY()
 	Identifier = "DEFAULT_PT_ARAY";
 	Name = "ARAY";
 	Colour = PIXPACK(0xFFBB00);
-	MenuVisible = 1;
+	MenuVisible = 0;
 	MenuSection = SC_ELEC;
 	Enabled = 1;
 

@@ -5,7 +5,7 @@ Element_BRCK::Element_BRCK()
 	Identifier = "DEFAULT_PT_BRCK";
 	Name = "BRCK";
 	Colour = PIXPACK(0x808080);
-	MenuVisible = 1;
+	MenuVisible = 0;
 	MenuSection = SC_SOLIDS;
 	Enabled = 1;
 

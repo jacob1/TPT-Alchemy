@@ -5,7 +5,7 @@ Element_INVIS::Element_INVIS()
 	Identifier = "DEFAULT_PT_INVIS";
 	Name = "INVS";
 	Colour = PIXPACK(0x00CCCC);
-	MenuVisible = 1;
+	MenuVisible = 0;
 	MenuSection = SC_SENSOR;
 	Enabled = 1;
 

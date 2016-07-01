@@ -5,7 +5,7 @@ Element_SMKE::Element_SMKE()
 	Identifier = "DEFAULT_PT_SMKE";
 	Name = "SMKE";
 	Colour = PIXPACK(0x222222);
-	MenuVisible = 1;
+	MenuVisible = 0;
 	MenuSection = SC_GAS;
 	Enabled = 1;
 

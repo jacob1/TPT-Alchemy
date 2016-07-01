@@ -5,7 +5,7 @@ Element_C5::Element_C5()
 	Identifier = "DEFAULT_PT_C5";
 	Name = "C-5";
 	Colour = PIXPACK(0x2050E0);
-	MenuVisible = 1;
+	MenuVisible = 0;
 	MenuSection = SC_EXPLOSIVE;
 	Enabled = 1;
 

@@ -5,7 +5,7 @@ Element_PCLN::Element_PCLN()
 	Identifier = "DEFAULT_PT_PCLN";
 	Name = "PCLN";
 	Colour = PIXPACK(0x3B3B0A);
-	MenuVisible = 1;
+	MenuVisible = 0;
 	MenuSection = SC_POWERED;
 	Enabled = 1;
 

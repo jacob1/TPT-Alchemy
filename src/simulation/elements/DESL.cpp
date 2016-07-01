@@ -5,7 +5,7 @@ Element_DESL::Element_DESL()
 	Identifier = "DEFAULT_PT_DESL";
 	Name = "DESL";
 	Colour = PIXPACK(0x440000);
-	MenuVisible = 1;
+	MenuVisible = 0;
 	MenuSection = SC_LIQUID;
 	Enabled = 1;
 

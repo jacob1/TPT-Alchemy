@@ -5,7 +5,7 @@ Element_PLNT::Element_PLNT()
 	Identifier = "DEFAULT_PT_PLNT";
 	Name = "PLNT";
 	Colour = PIXPACK(0x0CAC00);
-	MenuVisible = 1;
+	MenuVisible = 0;
 	MenuSection = SC_SOLIDS;
 	Enabled = 1;
 

@@ -5,7 +5,7 @@ Element_WHOL::Element_WHOL()
 	Identifier = "DEFAULT_PT_WHOL";
 	Name = "VENT";
 	Colour = PIXPACK(0xEFEFEF);
-	MenuVisible = 1;
+	MenuVisible = 0;
 	MenuSection = SC_SPECIAL;
 	Enabled = 1;
 

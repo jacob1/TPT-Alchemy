@@ -5,7 +5,7 @@ Element_THDR::Element_THDR()
 	Identifier = "DEFAULT_PT_THDR";
 	Name = "THDR";
 	Colour = PIXPACK(0xFFFFA0);
-	MenuVisible = 1;
+	MenuVisible = 0;
 	MenuSection = SC_EXPLOSIVE;
 	Enabled = 1;
 

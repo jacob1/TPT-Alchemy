@@ -5,7 +5,7 @@ Element_BMTL::Element_BMTL()
 	Identifier = "DEFAULT_PT_BMTL";
 	Name = "BMTL";
 	Colour = PIXPACK(0x505070);
-	MenuVisible = 1;
+	MenuVisible = 0;
 	MenuSection = SC_SOLIDS;
 	Enabled = 1;
 

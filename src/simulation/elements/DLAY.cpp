@@ -5,7 +5,7 @@ Element_DLAY::Element_DLAY()
 	Identifier = "DEFAULT_PT_DLAY";
 	Name = "DLAY";
 	Colour = PIXPACK(0x753590);
-	MenuVisible = 1;
+	MenuVisible = 0;
 	MenuSection = SC_POWERED;
 	Enabled = 1;
 

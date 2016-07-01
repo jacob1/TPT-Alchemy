@@ -5,7 +5,7 @@ Element_INSL::Element_INSL()
 	Identifier = "DEFAULT_PT_INSL";
 	Name = "INSL";
 	Colour = PIXPACK(0x9EA3B6);
-	MenuVisible = 1;
+	MenuVisible = 0;
 	MenuSection = SC_ELEC;
 	Enabled = 1;
 

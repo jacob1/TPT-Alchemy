@@ -5,7 +5,7 @@ Element_STKM2::Element_STKM2()
 	Identifier = "DEFAULT_PT_STKM2";
 	Name = "STK2";
 	Colour = PIXPACK(0x6464FF);
-	MenuVisible = 1;
+	MenuVisible = 0;
 	MenuSection = SC_SPECIAL;
 	Enabled = 1;
 

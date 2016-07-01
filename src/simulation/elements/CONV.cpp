@@ -5,7 +5,7 @@ Element_CONV::Element_CONV()
 	Identifier = "DEFAULT_PT_CONV";
 	Name = "CONV";
 	Colour = PIXPACK(0x0AAB0A);
-	MenuVisible = 1;
+	MenuVisible = 0;
 	MenuSection = SC_SPECIAL;
 	Enabled = 1;
 

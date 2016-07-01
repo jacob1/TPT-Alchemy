@@ -5,7 +5,7 @@ Element_GPMP::Element_GPMP()
 	Identifier = "DEFAULT_PT_GPMP";
 	Name = "GPMP";
 	Colour = PIXPACK(0x0A3B3B);
-	MenuVisible = 1;
+	MenuVisible = 0;
 	MenuSection = SC_POWERED;
 	Enabled = 1;
 

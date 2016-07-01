@@ -5,7 +5,7 @@ Element_SPRK::Element_SPRK()
 	Identifier = "DEFAULT_PT_SPRK";
 	Name = "SPRK";
 	Colour = PIXPACK(0xFFFF80);
-	MenuVisible = 1;
+	MenuVisible = 0;
 	MenuSection = SC_ELEC;
 	Enabled = 1;
 

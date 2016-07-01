@@ -5,7 +5,7 @@ Element_CRMC::Element_CRMC()
 	Identifier = "DEFAULT_PT_CRMC";
 	Name = "CRMC";
 	Colour = PIXPACK(0xD6D1D4);
-	MenuVisible = 1;
+	MenuVisible = 0;
 	MenuSection = SC_SOLIDS;
 	Enabled = 1;
 

@@ -5,7 +5,7 @@ Element_NTCT::Element_NTCT()
 	Identifier = "DEFAULT_PT_NTCT";
 	Name = "NTCT";
 	Colour = PIXPACK(0x505040);
-	MenuVisible = 1;
+	MenuVisible = 0;
 	MenuSection = SC_ELEC;
 	Enabled = 1;
 

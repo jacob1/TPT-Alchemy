@@ -5,7 +5,7 @@ Element_CLST::Element_CLST()
 	Identifier = "DEFAULT_PT_CLST";
 	Name = "CLST";
 	Colour = PIXPACK(0xE4A4A4);
-	MenuVisible = 1;
+	MenuVisible = 0;
 	MenuSection = SC_POWDERS;
 	Enabled = 1;
 

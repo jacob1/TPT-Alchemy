@@ -5,7 +5,7 @@ Element_ACEL::Element_ACEL()
 	Identifier = "DEFAULT_PT_ACEL";
 	Name = "ACEL";
 	Colour = PIXPACK(0x0099CC);
-	MenuVisible = 1;
+	MenuVisible = 0;
 	MenuSection = SC_FORCE;
 	Enabled = 1;
 

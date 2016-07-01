@@ -5,7 +5,7 @@ Element_NWHL::Element_NWHL()
 	Identifier = "DEFAULT_PT_NWHL";
 	Name = "WHOL";
 	Colour = PIXPACK(0xFFFFFF);
-	MenuVisible = 1;
+	MenuVisible = 0;
 	MenuSection = SC_SPECIAL;
 	Enabled = 1;
 

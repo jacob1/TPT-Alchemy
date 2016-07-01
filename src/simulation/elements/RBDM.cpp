@@ -5,7 +5,7 @@ Element_RBDM::Element_RBDM()
 	Identifier = "DEFAULT_PT_RBDM";
 	Name = "RBDM";
 	Colour = PIXPACK(0xCCCCCC);
-	MenuVisible = 1;
+	MenuVisible = 0;
 	MenuSection = SC_EXPLOSIVE;
 	Enabled = 1;
 

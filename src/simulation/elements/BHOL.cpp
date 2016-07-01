@@ -5,7 +5,7 @@ Element_BHOL::Element_BHOL()
 	Identifier = "DEFAULT_PT_BHOL";
 	Name = "VACU";
 	Colour = PIXPACK(0x303030);
-	MenuVisible = 1;
+	MenuVisible = 0;
 	MenuSection = SC_SPECIAL;
 	Enabled = 1;
 

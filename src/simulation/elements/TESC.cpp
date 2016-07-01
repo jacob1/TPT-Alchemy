@@ -5,7 +5,7 @@ Element_TESC::Element_TESC()
 	Identifier = "DEFAULT_PT_TESC";
 	Name = "TESC";
 	Colour = PIXPACK(0x707040);
-	MenuVisible = 1;
+	MenuVisible = 0;
 	MenuSection = SC_ELEC;
 	Enabled = 1;
 

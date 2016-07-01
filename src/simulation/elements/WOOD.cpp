@@ -5,7 +5,7 @@ Element_WOOD::Element_WOOD()
 	Identifier = "DEFAULT_PT_WOOD";
 	Name = "WOOD";
 	Colour = PIXPACK(0xC0A040);
-	MenuVisible = 1;
+	MenuVisible = 0;
 	MenuSection = SC_SOLIDS;
 	Enabled = 1;
 

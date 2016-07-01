@@ -5,7 +5,7 @@ Element_THRM::Element_THRM()
 	Identifier = "DEFAULT_PT_THRM";
 	Name = "THRM";
 	Colour = PIXPACK(0xA08090);
-	MenuVisible = 1;
+	MenuVisible = 0;
 	MenuSection = SC_EXPLOSIVE;
 	Enabled = 1;
 

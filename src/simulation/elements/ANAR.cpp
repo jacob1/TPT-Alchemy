@@ -5,7 +5,7 @@ Element_ANAR::Element_ANAR()
 	Identifier = "DEFAULT_PT_ANAR";
 	Name = "ANAR";
 	Colour = PIXPACK(0xFFFFEE);
-	MenuVisible = 1;
+	MenuVisible = 0;
 	MenuSection = SC_POWDERS;
 	Enabled = 1;
 

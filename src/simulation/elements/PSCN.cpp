@@ -5,7 +5,7 @@ Element_PSCN::Element_PSCN()
 	Identifier = "DEFAULT_PT_PSCN";
 	Name = "PSCN";
 	Colour = PIXPACK(0x805050);
-	MenuVisible = 1;
+	MenuVisible = 0;
 	MenuSection = SC_ELEC;
 	Enabled = 1;
 

@@ -5,7 +5,7 @@ Element_CBNW::Element_CBNW()
 	Identifier = "DEFAULT_PT_CBNW";
 	Name = "BUBW";
 	Colour = PIXPACK(0x2030D0);
-	MenuVisible = 1;
+	MenuVisible = 0;
 	MenuSection = SC_LIQUID;
 	Enabled = 1;
 

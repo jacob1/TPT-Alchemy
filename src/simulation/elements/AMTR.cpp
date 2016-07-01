@@ -5,7 +5,7 @@ Element_AMTR::Element_AMTR()
 	Identifier = "DEFAULT_PT_AMTR";
 	Name = "AMTR";
 	Colour = PIXPACK(0x808080);
-	MenuVisible = 1;
+	MenuVisible = 0;
 	MenuSection = SC_NUCLEAR;
 	Enabled = 1;
 

@@ -5,7 +5,7 @@ Element_BREC::Element_BREC()
 	Identifier = "DEFAULT_PT_BREC";
 	Name = "BREL";
 	Colour = PIXPACK(0x707060);
-	MenuVisible = 1;
+	MenuVisible = 0;
 	MenuSection = SC_POWDERS;
 	Enabled = 1;
 

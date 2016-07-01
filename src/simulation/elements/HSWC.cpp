@@ -5,7 +5,7 @@ Element_HSWC::Element_HSWC()
 	Identifier = "DEFAULT_PT_HSWC";
 	Name = "HSWC";
 	Colour = PIXPACK(0x3B0A0A);
-	MenuVisible = 1;
+	MenuVisible = 0;
 	MenuSection = SC_POWERED;
 	Enabled = 1;
 

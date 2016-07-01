@@ -5,7 +5,7 @@ Element_BIZRS::Element_BIZRS()
 	Identifier = "DEFAULT_PT_BIZRS";
 	Name = "BIZS";
 	Colour = PIXPACK(0x00E455);
-	MenuVisible = 1;
+	MenuVisible = 0;
 	MenuSection = SC_CRACKER2;
 	Enabled = 1;
 

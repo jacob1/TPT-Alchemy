@@ -5,7 +5,7 @@ Element_PLUT::Element_PLUT()
 	Identifier = "DEFAULT_PT_PLUT";
 	Name = "PLUT";
 	Colour = PIXPACK(0x407020);
-	MenuVisible = 1;
+	MenuVisible = 0;
 	MenuSection = SC_NUCLEAR;
 	Enabled = 1;
 

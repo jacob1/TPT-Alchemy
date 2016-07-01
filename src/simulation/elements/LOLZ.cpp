@@ -5,7 +5,7 @@ Element_LOLZ::Element_LOLZ()
 	Identifier = "DEFAULT_PT_LOLZ";
 	Name = "LOLZ";
 	Colour = PIXPACK(0x569212);
-	MenuVisible = 1;
+	MenuVisible = 0;
 	MenuSection = SC_CRACKER2;
 	Enabled = 1;
 

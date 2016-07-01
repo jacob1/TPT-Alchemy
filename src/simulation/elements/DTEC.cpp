@@ -5,7 +5,7 @@ Element_DTEC::Element_DTEC()
 	Identifier = "DEFAULT_PT_DTEC";
 	Name = "DTEC";
 	Colour = PIXPACK(0xFD9D18);
-	MenuVisible = 1;
+	MenuVisible = 0;
 	MenuSection = SC_SENSOR;
 	Enabled = 1;
 

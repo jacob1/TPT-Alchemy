@@ -10,7 +10,7 @@ Element_CFLM::Element_CFLM()
 	Identifier = "DEFAULT_PT_HFLM";
 	Name = "CFLM";
 	Colour = PIXPACK(0x8080FF);
-	MenuVisible = 1;
+	MenuVisible = 0;
 	MenuSection = SC_EXPLOSIVE;
 	Enabled = 1;
 

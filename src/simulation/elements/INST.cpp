@@ -5,7 +5,7 @@ Element_INST::Element_INST()
 	Identifier = "DEFAULT_PT_INST";
 	Name = "INST";
 	Colour = PIXPACK(0x404039);
-	MenuVisible = 1;
+	MenuVisible = 0;
 	MenuSection = SC_ELEC;
 	Enabled = 1;
 
