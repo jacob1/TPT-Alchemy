@@ -300,10 +300,13 @@ void GameModel::BuildMenus()
 	}
 
 	//Build menu for GOL types
-	for(int i = 0; i < NGOL; i++)
-	{
-		Tool * tempTool = new ElementTool(PT_LIFE|(i<<8), sim->gmenu[i].name, std::string(sim->gmenu[i].description), PIXR(sim->gmenu[i].colour), PIXG(sim->gmenu[i].colour), PIXB(sim->gmenu[i].colour), "DEFAULT_PT_LIFE_"+std::string(sim->gmenu[i].name));
-		menuList[SC_LIFE]->AddTool(tempTool);
+
+	if (sim->elementsAcquired[PT_LIFE]) {
+		for(int i = 0; i < NGOL; i++)
+		{
+			Tool * tempTool = new ElementTool(PT_LIFE|(i<<8), sim->gmenu[i].name, std::string(sim->gmenu[i].description), PIXR(sim->gmenu[i].colour), PIXG(sim->gmenu[i].colour), PIXB(sim->gmenu[i].colour), "DEFAULT_PT_LIFE_"+std::string(sim->gmenu[i].name));
+			menuList[SC_LIFE]->AddTool(tempTool);
+		}
 	}
 
 	//Build other menus from wall data
