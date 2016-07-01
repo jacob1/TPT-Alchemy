@@ -5072,7 +5072,16 @@ void Simulation::ElementAcquired(int type)
 {
 	std::stringstream messageStream;
 
-	if (!elementsAcquired[type] && elementCount[type] >= 10 && !ignoreElementAcquistion && elements[type].MenuSection!=SC_POWERED && elements[type].MenuSection!=SC_SENSOR && elements[type].MenuSection!=SC_FORCE && elements[type].MenuSection!=SC_CRACKER && elements[type].MenuSection!=SC_CRACKER2 && type!=PT_ARAY && type!=PT_CRAY && type!=PT_DRAY && type!=PT_BTRY && type!=PT_WIFI && type!=PT_LIFE && type!=PT_WIRE && type!=PT_PRTI && type!=PT_PRTO && type!=PT_NBHL && type!=PT_NWHL && type!=PT_VOID && type!=PT_CLNE && type!=PT_BCLN && type!=PT_PCLN && type!=PT_PBCN && type!=PT_CONV && type!=PT_WHOL && type!=PT_BHOL && type!=PT_GBMB && type!=PT_SPAWN && type!=PT_SPAWN2 && type!=PT_FIGH && type!=PT_TRON) {
+	if (!elementsAcquired[type] && !ignoreElementAcquistion && (elementCount[type] >= 10 || 
+				(elements[type].MenuSection == SC_ELEC && type != PT_METL && type != PT_TTAN) ||
+				elements[type].MenuSection == SC_POWERED ||
+			       	elements[type].MenuSection == SC_SENSOR ||
+			       	elements[type].MenuSection == SC_FORCE ||
+			       	elements[type].MenuSection == SC_CRACKER ||
+			       	elements[type].MenuSection == SC_CRACKER2 ||
+			       	elements[type].MenuSection == SC_SPECIAL ||
+				type == PT_LIFE || type == PT_GBMB)) 
+	{
                 elementsAcquired[type] = true;
                 elements[type].MenuVisible = 1;
 		GetGameController()->GetModel()->BuildMenus();
