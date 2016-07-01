@@ -79,8 +79,17 @@ GameModel::GameModel():
 	int ngrav_enable = Client::Ref().GetPrefInteger("Simulation.NewtonianGravity", 0);
 	if (ngrav_enable)
 		sim->grav->start_grav_async();
-	sim->aheat_enable =  Client::Ref().GetPrefInteger("Simulation.AmbientHeat", 0);
-	sim->pretty_powder =  Client::Ref().GetPrefInteger("Simulation.PrettyPowder", 0);
+	sim->aheat_enable = Client::Ref().GetPrefInteger("Simulation.AmbientHeat", 0);
+	sim->pretty_powder = Client::Ref().GetPrefInteger("Simulation.PrettyPowder", 0);
+
+	tempArray = Client::Ref().GetPrefUIntegerArray("Simulation.ElementsAcquired");
+
+        if(tempArray.size())
+        {
+		for(int i = 0; i < tempArray.size(); i++) {
+			sim->elementsAcquired[i] = tempArray[i];
+		}
+	}
 
 	//Load favorites
 	std::vector<std::string> favoritesList = Client::Ref().GetPrefStringArray("Favorites");
@@ -156,6 +165,8 @@ GameModel::~GameModel()
 	Client::Ref().SetPref("Simulation.NewtonianGravity", sim->grav->ngrav_enable);
 	Client::Ref().SetPref("Simulation.AmbientHeat", sim->aheat_enable);
 	Client::Ref().SetPref("Simulation.PrettyPowder", sim->pretty_powder);
+
+	Client::Ref().SetPref("Simulation.ElementsAcquired", std::vector<Json::Value>(sim->elementsAcquired, sim->elementsAcquired + sizeof(sim->elementsAcquired)/sizeof(bool)));
 
 	Client::Ref().SetPref("Decoration.Red", (int)colour.Red);
 	Client::Ref().SetPref("Decoration.Green", (int)colour.Green);
