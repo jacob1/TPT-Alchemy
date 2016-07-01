@@ -1,5 +1,5 @@
 static const char *introTextData =
-	"\blThe Powder Toy - Version " MTOS(SAVE_VERSION) "." MTOS(MINOR_VERSION) " - http://powdertoy.co.uk, irc.freenode.net #powder\n"
+	"\blThe Powder Toy - Version " MTOS(SAVE_VERSION) "." MTOS(MINOR_VERSION) " with the Alchemy Mod - http://powdertoy.co.uk, irc.freenode.net #powder\n"
 	"\x7F\x7F\x7F\x7F\x7F\x7F\x7F\x7F\x7F\x7F\x7F\x7F\x7F\x7F\x7F\x7F\x7F\x7F\x7F\n"
 	"\n"
 	"\bgControl+C/V/X are Copy, Paste and cut respectively.\n"
@@ -18,6 +18,8 @@ static const char *introTextData =
 	"Use 'P' to take a screenshot and save it into the current directory.\n"
 	"Use 'H' to toggle the HUD. Use 'D' to toggle debug mode in the HUD.\n"
 	"\n"
+	"Alchemy Mod made by \bgSkresanov Savely and SopaXorzTaker\n"
+	"\n"
 	"Contributors: \bgStanislaw K Skowronek (Designed the original Powder Toy),\n"
 	"\bgSimon Robertshaw, Skresanov Savely, cracker64, Catelite, Bryan Hoyle, Nathan Cousins, jacksonmj,\n"
 	"\bgFelix Wallin, Lieuwe Mosch, Anthony Boot, Matthew \"me4502\", MaksProg, jacob1, mniip\n"
@@ -25,7 +27,7 @@ static const char *introTextData =
 #ifndef BETA
 	"\bgTo use online features such as saving, you need to register at: \brhttp://powdertoy.co.uk/Register.html\n"
 #else
-	"\brThis is a BETA, you cannot save things publicly. If you are planning on publishing any saves, use the release version\n"
+	"\brThis is a mod, you cannot save things publicly. If you are planning on publishing any saves, use the release version\n"
 #endif
 	"\n"
 	"\bt" MTOS(SAVE_VERSION) "." MTOS(MINOR_VERSION) "." MTOS(BUILD_NUM) " " IDENT_PLATFORM " "
