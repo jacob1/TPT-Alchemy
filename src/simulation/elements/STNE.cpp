@@ -41,7 +41,25 @@ Element_STNE::Element_STNE()
 	HighTemperature = 983.0f;
 	HighTemperatureTransition = PT_LAVA;
 
-	Update = NULL;
+	Update = &Element_STNE::update;
+}
+
+//#TPT-Directive ElementHeader Element_STNE static int update(UPDATE_FUNC_ARGS)
+int Element_STNE::update(UPDATE_FUNC_ARGS)
+{
+	int r, rx, ry;
+	for (rx=-1; rx<2; rx++)
+		for (ry=-1; ry<2; ry++)
+			if (BOUNDS_CHECK && (!rx != !ry))
+			{
+				r = pmap[y+ry][x+rx];
+				if(!r && parts[i].type == PT_STNE)
+				{
+					if(parts[r>>8].type == PT_WATR && parts[i].temp >= 50+O_CELS && rand()%20 == 0)
+						sim->create_part(i, x, y, PT_SALT);
+				}
+			}
+	return 0;
 }
 
 Element_STNE::~Element_STNE() {}
