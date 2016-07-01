@@ -2703,6 +2703,8 @@ void Simulation::part_change_type(int i, int x, int y, int t)//changes the type 
 		return;
 	}
 
+	ElementAcquired(t);
+
 	if (parts[i].type == PT_STKM)
 		player.spwn = 0;
 	else if (parts[i].type == PT_STKM2)
@@ -2772,6 +2774,8 @@ int Simulation::create_part(int p, int x, int y, int t, int v)
 		return -1;
 	if (t>=0 && t<PT_NUM && !elements[t].Enabled)
 		return -1;
+
+	ElementAcquired(t);
 
 	if (t == SPC_AIR)
 	{
@@ -5064,6 +5068,19 @@ void Simulation::AfterSim()
 	}
 }
 
+void Simulation::ElementAcquired(int type)
+{
+	std::stringstream messageStream;
+
+	// TODO add craftable elements
+	if (!elementsAcquired[type] && elementCount[type] >= 10) {
+                elementsAcquired[type] = true;
+                elements[type].MenuVisible = 1;
+		messageStream << "New element found: " << elements[type].Name << "!";
+		GetGameController()->GetModel()->SetInfoTip(messageStream.str());
+	}
+}
+
 Simulation::~Simulation()
 {
 	delete[] platent;
@@ -5154,6 +5171,8 @@ Simulation::Simulation():
 			elements[i] = elementList[i];
 		else
 			elements[i] = Element();
+
+		elementsAcquired[i] = false;
 	}
 	
 	tools = GetTools();

@@ -14,6 +14,7 @@
 #include "GOLMenu.h"
 #include "MenuSection.h"
 #include "elements/Element.h"
+#include "GameController.h"
 
 #define CHANNELS ((int)(MAX_TEMP-73)/100+2)
 
@@ -39,6 +40,7 @@ public:
 
 	std::vector<sign> signs;
 	Element elements[PT_NUM];
+	bool elementsAcquired[PT_NUM];
 	//Element * elements;
 	std::vector<SimTool*> tools;
 	unsigned int * platent;
@@ -201,6 +203,8 @@ public:
 	void GetGravityField(int x, int y, float particleGrav, float newtonGrav, float & pGravX, float & pGravY);
 
 	int GetParticleType(std::string type);
+
+	void ElementAcquired(int type);
 
 	void orbitalparts_get(int block1, int block2, int resblock1[], int resblock2[]);
 	void orbitalparts_set(int *block1, int *block2, int resblock1[], int resblock2[]);

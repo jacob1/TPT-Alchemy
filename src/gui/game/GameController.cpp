@@ -1567,3 +1567,8 @@ void GameController::RunUpdater()
 	Exit();
 	new UpdateActivity();
 }
+
+GameModel * GameController::GetModel()
+{
+	return gameModel;
+}

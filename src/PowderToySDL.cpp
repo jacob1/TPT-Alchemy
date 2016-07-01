@@ -74,6 +74,8 @@ SDL_Surface * sdl_scrn;
 int scale = 1;
 bool fullscreen = false;
 
+GameController * gameController = NULL;
+
 void ClipboardPush(std::string text)
 {
 	clipboardText = text;
@@ -1064,7 +1066,6 @@ int main(int argc, char * argv[])
 	signal(SIGABRT, SigHandler);
 #endif
 
-	GameController * gameController = NULL;
 #if !defined(DEBUG) && !defined(_DEBUG)
 	try {
 #endif
@@ -1192,3 +1193,8 @@ int main(int argc, char * argv[])
 }
 
 #endif
+
+GameController * GetGameController()
+{
+	return gameController;
+}

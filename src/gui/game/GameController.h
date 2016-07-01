@@ -2,9 +2,8 @@
 #define GAMECONTROLLER_H
 
 #include <queue>
-#include "GameView.h"
-#include "GameModel.h"
 #include "simulation/Simulation.h"
+#include "simulation/Snapshot.h"
 #include "gui/interface/Point.h"
 #include "gui/search/SearchController.h"
 #include "gui/render/RenderController.h"
@@ -13,10 +12,14 @@
 #include "gui/tags/TagsController.h"
 #include "gui/console/ConsoleController.h"
 #include "gui/localbrowser/LocalBrowserController.h"
-#include "gui/options/OptionsController.h"
 #include "client/ClientListener.h"
 #include "RenderPreset.h"
 #include "Menu.h"
+#include "GameView.h"
+#include "GameModel.h"
+
+#include "gui/options/OptionsController.h"
+class OptionsController;
 
 using namespace std;
 
@@ -159,6 +162,8 @@ public:
 	void LoadStamp(GameSave *stamp);
 
 	void RemoveNotification(Notification * notification);
+
+	GameModel * GetModel();
 
 	virtual void NotifyUpdateAvailable(Client * sender);
 	virtual void NotifyAuthUserChanged(Client * sender);
