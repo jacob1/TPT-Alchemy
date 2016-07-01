@@ -5076,6 +5076,7 @@ void Simulation::ElementAcquired(int type)
 	if (!elementsAcquired[type] && elementCount[type] >= 10) {
                 elementsAcquired[type] = true;
                 elements[type].MenuVisible = 1;
+		GetGameController()->GetModel()->BuildMenus();
 		messageStream << "New element found: " << elements[type].Name << "!";
 		GetGameController()->GetModel()->SetInfoTip(messageStream.str());
 	}
