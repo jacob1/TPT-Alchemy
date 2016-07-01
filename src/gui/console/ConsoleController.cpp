@@ -19,7 +19,7 @@ void ConsoleController::EvaluateCommand(std::string command)
 	{
 		if (command.substr(0, 6) == "!load ")
 			CloseConsole();
-		int returnCode = commandInterface->Command(command);
+		int returnCode = 0; //commandInterface->Command(command);
 		consoleModel->AddLastCommand(ConsoleCommand(command, returnCode, commandInterface->GetLastError()));
 	}
 	else
