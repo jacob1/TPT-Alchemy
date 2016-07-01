@@ -50,13 +50,27 @@ int Element_STNE::update(UPDATE_FUNC_ARGS)
 	int r, rx, ry;
 	for (rx=-1; rx<2; rx++)
 		for (ry=-1; ry<2; ry++)
-			if (BOUNDS_CHECK && (!rx != !ry))
+			if (BOUNDS_CHECK && (rx || ry))
 			{
 				r = pmap[y+ry][x+rx];
-				if(!r && parts[i].type == PT_STNE)
+				if(!r)
+					continue;
+
+				if(parts[i].type == PT_STNE)
 				{
-					if(parts[r>>8].type == PT_WATR && parts[i].temp >= 50+O_CELS && rand()%20 == 0)
-						sim->create_part(i, x, y, PT_SALT);
+					if((r&0xFF) == PT_WATR)
+					{	
+						if((parts[i].temp >= 50+O_CELS) && i%20 == 0)
+						{
+							sim->create_part(i, x, y, PT_SALT);
+							continue;
+						}
+						if((sim->pv[y/CELL][x/CELL] > 2.0f) && i%10 == 0)
+						{
+							sim->create_part(i, x, y, PT_SAND);
+							continue;
+						}
+					}
 				}
 			}
 	return 0;

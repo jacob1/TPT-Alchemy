@@ -41,10 +41,20 @@ Element_LAVA::Element_LAVA()
 	HighTemperature = ITH;
 	HighTemperatureTransition = NT;
 
-	Update = &Element_FIRE::update;
+	Update = &Element_LAVA::update;
 	Graphics = &Element_LAVA::graphics;
 }
 
+//#TPT-Directive ElementHeader Element_LAVA static int update(UPDATE_FUNC_ARGS)
+int Element_LAVA::update(UPDATE_FUNC_ARGS)
+{
+	if(parts[i].ctype == PT_STNE && (parts[i].temp >= 1500 + O_CELS) && i%10 == 0)
+	{
+		parts[i].ctype = PT_IRON;
+	}
+	else
+		Element_FIRE::update(UPDATE_FUNC_SUBCALL_ARGS);
+}
 
 //#TPT-Directive ElementHeader Element_LAVA static int graphics(GRAPHICS_FUNC_ARGS)
 int Element_LAVA::graphics(GRAPHICS_FUNC_ARGS)
