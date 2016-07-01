@@ -5,7 +5,7 @@ Element_LO2::Element_LO2()
 	Identifier = "DEFAULT_PT_LO2";
 	Name = "LOXY";
 	Colour = PIXPACK(0x80A0EF);
-	MenuVisible = 1;
+	MenuVisible = 0;
 	MenuSection = SC_LIQUID;
 	Enabled = 1;
 
