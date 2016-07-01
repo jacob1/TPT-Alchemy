@@ -5,7 +5,7 @@ Element_CO2::Element_CO2()
 	Identifier = "DEFAULT_PT_CO2";
 	Name = "CO2";
 	Colour = PIXPACK(0x666666);
-	MenuVisible = 1;
+	MenuVisible = 0;
 	MenuSection = SC_GAS;
 	Enabled = 1;
 
