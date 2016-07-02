@@ -982,6 +982,13 @@ GameSave * GameModel::GetPlaceSave()
 	return placeSave;
 }
 
+void GameModel::CheckAcheivement(Acheivement acheivement) {
+        // TODO display a message
+
+        if (acheivement.checkCompletion(sim))
+                acheivements.push_back(acheivement);
+}
+
 void GameModel::Log(string message, bool printToFile)
 {
 	consoleLog.push_front(message);

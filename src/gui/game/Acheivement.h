@@ -1,6 +1,8 @@
 #ifndef ACHEIVEMENT_H
 #define ACHEIVEMENT_H
 
+#include "simulation/Simulation.h"
+
 #define ACHEIVEMENT_BASIC 1
 #define ACHEIVEMENT_DIAMOND 2
 #define ACHEIVEMENT_ELECTRONICS 3
@@ -10,6 +12,8 @@
 #define ACHEIVEMENT_PORTAL 7
 #define ACHEIVEMENT_EXTRA 8
 #define ACHEIVEMENT_ALL 9
+
+using namespace std;
 
 // TODO - make stuff object oriented
 
@@ -54,9 +58,22 @@ int extraElements[] = {
 
 };
 
-// excluding extra
 int allElements[] = {
 
 };
+
+class Acheivement {
+	public:
+		Acheivement();
+		~Acheivement();
+		std::string GetTitle();
+		std::string GetText();
+		bool checkCompletion(Simulation * sim);
+	private:
+		std::string title;
+		std::string text;
+};
+
+// TODO add acheivements
 
 #endif
