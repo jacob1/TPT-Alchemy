@@ -98,6 +98,7 @@ int Element_LAVA::update(UPDATE_FUNC_ARGS)
 			}
 
 	Element_FIRE::update(UPDATE_FUNC_SUBCALL_ARGS);
+	return 0;
 }
 
 //#TPT-Directive ElementHeader Element_LAVA static int graphics(GRAPHICS_FUNC_ARGS)
