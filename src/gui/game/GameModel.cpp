@@ -84,9 +84,9 @@ GameModel::GameModel():
 
 	tempArray = Client::Ref().GetPrefUIntegerArray("Simulation.ElementsAcquired");
 
-        if(tempArray.size())
-        {
-		for(int i = 0; i < tempArray.size(); i++) {
+	if(tempArray.size())
+	{
+		for(size_t i = 0; i < tempArray.size(); i++) {
 			sim->elementsAcquired[i] = tempArray[i];
 		}
 	}
@@ -244,7 +244,7 @@ void GameModel::BuildMenus()
 		activeToolIdentifiers[3] = regularToolset[3]->GetIdentifier();
 
 	for (int i=0; i < PT_NUM; i++) {
-		if (i != PT_WATR && i != PT_STNE && i != PT_FIRE && i != PT_O2)
+		if (i != 0 && i != PT_WATR && i != PT_STNE && i != PT_FIRE && i != PT_O2)
 			sim->elements[i].MenuVisible = sim->elementsAcquired[i]?1:0;
 	}
 
