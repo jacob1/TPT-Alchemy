@@ -78,12 +78,12 @@ int Element_STNE::update(UPDATE_FUNC_ARGS)
 						if((parts[i].temp >= 50+O_CELS) && i%20 == 0)
 						{
 							sim->create_part(i, x, y, PT_SALT);
-							continue;
+							return 1;
 						}
 						if((sim->pv[y/CELL][x/CELL] > 2.0f) && i%10 == 0)
 						{
 							sim->create_part(i, x, y, PT_SAND);
-							continue;
+							return 1;
 						}
 					}
 				}
@@ -94,6 +94,7 @@ int Element_STNE::update(UPDATE_FUNC_ARGS)
 		sim->create_part(i, x, y, PT_CLST);
 		sim->kill_part(dustid);
 		sim->kill_part(saltid);
+		return 1;
 	}
 
 	return 0;

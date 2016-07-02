@@ -249,12 +249,14 @@ int Element_SOAP::update(UPDATE_FUNC_ARGS)
 						{
 							sim->create_part(i, x, y, PT_WAX);
 							sim->kill_part(r>>8);
+							return 1;
 						}
 					}
 					if (parts[i].type == PT_SOAP && (r&0xFF) == PT_CO2)
 					{
 						sim->create_part(i, x, y, PT_SPNG);
 						sim->kill_part(r>>8);
+						return 1;
 					}
 				}
 	}

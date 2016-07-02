@@ -67,6 +67,7 @@ int Element_WOOD::update(UPDATE_FUNC_ARGS)
 				{
 					sim->create_part(i, x, y, PT_IGNT);
 					sim->kill_part(r>>8);
+					return 1;
 				}
 			}
 	return 0;

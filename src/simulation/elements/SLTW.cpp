@@ -87,6 +87,7 @@ int Element_SLTW::update(UPDATE_FUNC_ARGS)
 					{
 						sim->kill_part(r>>8);
 						sim->create_part(i, x, y, PT_SOAP);
+						return 1;
 					}
 					break;
 				case PT_NONE:

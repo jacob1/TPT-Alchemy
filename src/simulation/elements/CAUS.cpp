@@ -76,6 +76,7 @@ int Element_CAUS::update(UPDATE_FUNC_ARGS)
 						{
 							sim->create_part(i, x, y, PT_BOYL);
 							sim->kill_part(r>>8);
+							return 1;
 						}
 					}
 					else if (parts[i].life<=50)
