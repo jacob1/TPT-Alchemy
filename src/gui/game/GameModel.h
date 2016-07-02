@@ -16,6 +16,8 @@
 #include "Tool.h"
 #include "Menu.h"
 
+#include "gui/game/Acheivement.h"
+
 using namespace std;
 
 class GameView;
