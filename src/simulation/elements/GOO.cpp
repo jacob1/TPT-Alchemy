@@ -67,7 +67,10 @@ int Element_GOO::update(UPDATE_FUNC_ARGS)
 					continue;
 
 				if(parts[i].type == PT_GOO && (r&0xFF) == PT_WATR && !(i%20))
+				{
 					sim->create_part(i, x, y, PT_PLNT);
+					return 1;
+				}
 			}
 
 	return 0;

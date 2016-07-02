@@ -68,7 +68,7 @@ int Element_VINE::update(UPDATE_FUNC_ARGS)
 		{
 			sim->create_part(i, x, y, PT_SHLD1);
 			sim->kill_part(r>>8);
-			return 0;
+			return 1;
 		}
 	}
 	if (parts[i].temp > 350 && parts[i].temp > parts[i].tmp2)

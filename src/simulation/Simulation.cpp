@@ -5086,7 +5086,7 @@ void Simulation::ElementAcquired(int type)
                 elements[type].MenuVisible = 1;
 		GetGameController()->GetModel()->BuildMenus();
 		messageStream << "New element found: " << elements[type].Name << "!";
-		GetGameController()->GetModel()->SetInfoTip(messageStream.str());
+		GetGameController()->GetModel()->Log(messageStream.str(), false);
 	}
 }
 

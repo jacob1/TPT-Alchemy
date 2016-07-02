@@ -80,6 +80,7 @@ int Element_COAL::update(UPDATE_FUNC_ARGS)
 					{
 						sim->create_part(i, x, y, PT_GUNP);
 						sim->kill_part(r>>8);
+						return 1;
 					}
 				}
 	}

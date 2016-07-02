@@ -84,9 +84,9 @@ GameModel::GameModel():
 
 	tempArray = Client::Ref().GetPrefUIntegerArray("Simulation.ElementsAcquired");
 
-        if(tempArray.size())
-        {
-		for(int i = 0; i < tempArray.size(); i++) {
+	if(tempArray.size())
+	{
+		for(size_t i = 0; i < tempArray.size(); i++) {
 			sim->elementsAcquired[i] = tempArray[i];
 		}
 	}
@@ -244,7 +244,7 @@ void GameModel::BuildMenus()
 		activeToolIdentifiers[3] = regularToolset[3]->GetIdentifier();
 
 	for (int i=0; i < PT_NUM; i++) {
-		if (i != PT_WATR && i != PT_STNE && i != PT_FIRE && i != PT_O2)
+		if (i != 0 && i != PT_WATR && i != PT_STNE && i != PT_FIRE && i != PT_O2)
 			sim->elements[i].MenuVisible = sim->elementsAcquired[i]?1:0;
 	}
 
@@ -264,9 +264,18 @@ void GameModel::BuildMenus()
 	elementTools.clear();
 
 	//Create menus
-	for(int i = 0; i < SC_TOTAL; i++)
+	for (int i = 1; i < SC_TOOL; i++)
 	{
-		menuList.push_back(new Menu((const char)sim->msections[i].icon[0], sim->msections[i].name));
+		sim->msections[i].doshow = 0;
+	}
+	for (int i = 0; i < PT_NUM; i++)
+	{
+		if (sim->elements[i].Enabled && sim->elements[i].MenuVisible)
+			sim->msections[sim->elements[i].MenuSection].doshow = 1;
+	}
+	for (int i = 0; i < SC_TOTAL; i++)
+	{
+		menuList.push_back(new Menu((const char)sim->msections[i].icon[0], sim->msections[i].name, sim->msections[i].doshow));
 	}
 
 	//Build menus from Simulation elements
