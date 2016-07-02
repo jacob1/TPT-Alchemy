@@ -53,6 +53,22 @@ int Element_WOOD::update(UPDATE_FUNC_ARGS)
 
 	if (parts[i].temp > 800 && !(i%10))
 		sim->create_part(i, x, y, PT_COAL);
+
+	int r, rx, ry;
+	for (rx=-1; rx<2; rx++)
+		for (ry=-1; ry<2; ry++)
+			if (BOUNDS_CHECK && (rx || ry))
+			{
+				r = pmap[y+ry][x+rx];
+				if (!r)
+					continue;
+
+				if(parts[i].type == PT_WOOD && (r&0xFF) == PT_GUNP)
+				{
+					sim->create_part(i, x, y, PT_IGNT);
+					sim->kill_part(r>>8);
+				}
+			}
 	return 0;
 }
 //#TPT-Directive ElementHeader Element_WOOD static int graphics(GRAPHICS_FUNC_ARGS)

@@ -36,8 +36,8 @@ Element_NITR::Element_NITR()
 	LowPressureTransition = NT;
 	HighPressure = IPH;
 	HighPressureTransition = NT;
-	LowTemperature = ITL;
-	LowTemperatureTransition = NT;
+	LowTemperature = 50;
+	LowTemperatureTransition = PT_NICE;
 	HighTemperature = 673.0f;
 	HighTemperatureTransition = PT_FIRE;
 

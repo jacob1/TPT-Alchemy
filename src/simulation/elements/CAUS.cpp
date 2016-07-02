@@ -70,6 +70,14 @@ int Element_CAUS::update(UPDATE_FUNC_ARGS)
 							sim->kill_part(r>>8);
 						}
 					}
+					else if ((r&0xFF) == PT_CO2)
+					{
+						if(parts[i].type == PT_CAUS)
+						{
+							sim->create_part(i, x, y, PT_BOYL);
+							sim->kill_part(r>>8);
+						}
+					}
 					else if (parts[i].life<=50)
 					{
 						sim->kill_part(i);

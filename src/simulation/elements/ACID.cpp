@@ -87,6 +87,12 @@ int Element_ACID::update(UPDATE_FUNC_ARGS)
 							sim->kill_part(r>>8);
 						}
 					}
+					else if ((r&0xFF) == PT_SOAP)
+					{
+						sim->create_part(i, x, y, PT_NITR);
+						parts[i].temp += 10;
+						sim->kill_part(r>>8);
+					}
 					else if (parts[i].life<=50)
 					{
 						sim->kill_part(i);

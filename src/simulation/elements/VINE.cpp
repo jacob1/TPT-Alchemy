@@ -64,6 +64,12 @@ int Element_VINE::update(UPDATE_FUNC_ARGS)
 			parts[np].temp = parts[i].temp;
 			sim->part_change_type(i,x,y,PT_PLNT);
 		}
+		else if((r&0xFF) == PT_TTAN)
+		{
+			sim->create_part(i, x, y, PT_SHLD1);
+			sim->kill_part(r>>8);
+			return 0;
+		}
 	}
 	if (parts[i].temp > 350 && parts[i].temp > parts[i].tmp2)
 		parts[i].tmp2 = (int)parts[i].temp;

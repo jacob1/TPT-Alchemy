@@ -244,6 +244,17 @@ int Element_SOAP::update(UPDATE_FUNC_ARGS)
 						ay = ((parts[i].vy-0.1f)*0.5f + parts[r>>8].vy)/2;
 						parts[i].vx = parts[r>>8].vx = ax;
 						parts[i].vy = parts[r>>8].vy = ay;
+
+						if(parts[i].type == PT_SOAP && parts[i].temp <= O_CELS)
+						{
+							sim->create_part(i, x, y, PT_WAX);
+							sim->kill_part(r>>8);
+						}
+					}
+					if (parts[i].type == PT_SOAP && (r&0xFF) == PT_CO2)
+					{
+						sim->create_part(i, x, y, PT_SPNG);
+						sim->kill_part(r>>8);
 					}
 				}
 	}

@@ -51,6 +51,52 @@ int Element_LAVA::update(UPDATE_FUNC_ARGS)
 	if(parts[i].ctype == PT_STNE && (parts[i].temp >= 1500 + O_CELS) && i%10 == 0)
 		parts[i].ctype = PT_IRON;
 
+	int r, rx, ry;
+	for (rx=-1; rx<2; rx++)
+		for (ry=-1; ry<2; ry++)
+			if (BOUNDS_CHECK && (rx || ry))
+			{
+				r = pmap[y+ry][x+rx];
+				if (!r)
+					continue;
+
+				if(parts[i].type == PT_LAVA)
+				{
+					switch(parts[i].ctype)
+					{
+						case PT_IRON:
+							if(parts[i].temp >= 5000 + O_CELS &&
+									(r&0xFF) == PT_LAVA && parts[r>>8].ctype == PT_METL)
+							{
+								parts[i].ctype = PT_TTAN;
+								sim->kill_part(r>>8);
+							}
+							break;
+						case PT_GLAS:
+							if((r&0xFF) == PT_SAND)
+							{
+								parts[i].ctype = PT_QRTZ;
+								sim->kill_part(r>>8);
+							}
+							else if((r&0xFF) == PT_BREC)
+							{
+								parts[i].ctype = PT_FILT;
+								sim->kill_part(r>>8);
+							}
+							break;
+						case PT_CLST:
+							if(parts[i].temp >= 1400 + O_CELS && (r&0xFF) == PT_SAND)
+							{
+								parts[i].ctype = PT_CNCT;
+								sim->kill_part(r>>8);
+							}
+							break;
+						default:
+							break;
+					}
+				}
+			}
+
 	Element_FIRE::update(UPDATE_FUNC_SUBCALL_ARGS);
 }
 

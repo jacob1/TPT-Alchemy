@@ -66,6 +66,23 @@ int Element_COAL::update(UPDATE_FUNC_ARGS)
 			return 1;
 		}
 	}
+	if(parts[i].type == PT_BCOL)
+	{
+		int r, rx, ry ;
+		for (rx=-1; rx<2; rx++)
+			for (ry=-1; ry<2; ry++)
+				if (BOUNDS_CHECK && (rx || ry))
+				{
+					r = pmap[y+ry][x+rx];
+					if (!r)
+						continue;
+					if(parts[i].type == PT_BCOL && (r&0xFF) == PT_DUST && !(i%2))
+					{
+						sim->create_part(i, x, y, PT_GUNP);
+						sim->kill_part(r>>8);
+					}
+				}
+	}
 	if(parts[i].temp > parts[i].tmp2)
 		parts[i].tmp2 = parts[i].temp;
 	return 0;

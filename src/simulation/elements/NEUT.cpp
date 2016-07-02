@@ -169,6 +169,30 @@ int Element_NEUT::update(UPDATE_FUNC_ARGS)
 					if (!(rand()%20))
 						parts[r>>8].life = 1500;
 					break;
+				case PT_LAVA:
+					if(parts[r>>8].ctype == PT_BMTL)
+					{
+						sim->part_change_type(r>>8, x+rx, y+ry, PT_MERC);
+					}
+					break;
+				case PT_MERC:
+					if(!(i%1000))
+					{
+						sim->create_part(r>>8, x+rx, y+ry, PT_GOLD);
+					}
+					break;
+				case PT_SPNG:
+					if(!(rand()%10))
+					{
+						sim->create_part(r>>8, x+rx, y+ry, PT_GEL);
+					}
+					break;
+				case PT_WAX:
+					if(!(rand()%10))
+					{
+						sim->create_part(r>>8, x+rx, y+ry, PT_INSL);
+					}
+					break;
 				default:
 					break;
 				}

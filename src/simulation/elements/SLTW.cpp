@@ -82,6 +82,13 @@ int Element_SLTW::update(UPDATE_FUNC_ARGS)
 						}
 					}
 					break;
+				case PT_BCOL:
+					if(!(i%10))
+					{
+						sim->kill_part(r>>8);
+						sim->create_part(i, x, y, PT_SOAP);
+					}
+					break;
 				case PT_NONE:
 					break;
 				default:
