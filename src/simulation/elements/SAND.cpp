@@ -76,7 +76,10 @@ int Element_SAND::update(UPDATE_FUNC_ARGS)
 		sim->create_part(i, x, y, PT_GOO);
 		sim->kill_part(dustid);
 		sim->kill_part(watrid);
+		return 1;
 	}
+
+	return 0;
 }
 
 Element_SAND::~Element_SAND() {}
