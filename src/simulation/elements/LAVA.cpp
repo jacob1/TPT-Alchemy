@@ -91,6 +91,24 @@ int Element_LAVA::update(UPDATE_FUNC_ARGS)
 								sim->kill_part(r>>8);
 							}
 							break;
+						case PT_INST:
+							if(parts[i].temp >= 5000 + O_CELS && (r&0xFF) == PT_SAND)
+							{
+								if(rand()%2)
+									parts[i].ctype = PT_PSCN;
+								else
+									parts[i].ctype = PT_NSCN;
+
+								sim->kill_part(r>>8);
+							}
+							break;
+						case PT_NSCN:
+							if((r&0xFF) == PT_LAVA && parts[r>>8].ctype == PT_PSCN)
+							{
+								parts[i].ctype = PT_SWCH;
+								sim->kill_part(r>>8);
+							}
+							break;
 						default:
 							break;
 					}

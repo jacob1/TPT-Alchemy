@@ -55,6 +55,12 @@ int Element_GRVT::update(UPDATE_FUNC_ARGS)
 		parts[i].tmp = -100;
 
 	sim->gravmap[(y/CELL)*(XRES/CELL)+(x/CELL)] = 0.2f*parts[i].tmp;
+
+	int r = pmap[y][x];
+
+	if(r && (r&0xFF) == PT_ACID)
+		sim->create_part(r>>8, x, y, PT_GLOW);
+
 	return 0;
 }
 

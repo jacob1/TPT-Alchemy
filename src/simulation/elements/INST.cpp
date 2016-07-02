@@ -38,8 +38,8 @@ Element_INST::Element_INST()
 	HighPressureTransition = NT;
 	LowTemperature = ITL;
 	LowTemperatureTransition = NT;
-	HighTemperature = ITH;
-	HighTemperatureTransition = NT;
+	HighTemperature = 5000 + O_CELS;
+	HighTemperatureTransition = PT_LAVA;
 
 	Update = NULL;
 }
