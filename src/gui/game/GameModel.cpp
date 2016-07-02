@@ -244,7 +244,8 @@ void GameModel::BuildMenus()
 		activeToolIdentifiers[3] = regularToolset[3]->GetIdentifier();
 
 	for (int i=0; i < PT_NUM; i++) {
-		sim->elements[i].MenuVisible = sim->elementsAcquired[i]?1:0;
+		if (i != PT_WATR && i != PT_STNE && i != PT_FIRE && i != PT_O2)
+			sim->elements[i].MenuVisible = sim->elementsAcquired[i]?1:0;
 	}
 
 	//Empty current menus
