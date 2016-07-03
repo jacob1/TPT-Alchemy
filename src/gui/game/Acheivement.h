@@ -20,9 +20,6 @@ using namespace std;
 
 class Acheivement {
 	public:
-		Acheivement();
-		~Acheivement();
-
 		bool checkCompletion(Simulation * sim);
 
 		std::string title;
