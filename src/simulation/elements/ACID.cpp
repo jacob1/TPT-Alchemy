@@ -48,6 +48,9 @@ Element_ACID::Element_ACID()
 //#TPT-Directive ElementHeader Element_ACID static int update(UPDATE_FUNC_ARGS)
 int Element_ACID::update(UPDATE_FUNC_ARGS)
 {
+	if(Element_ETRD::craft_with(UPDATE_FUNC_SUBCALL_ARGS, PT_ETRD, PT_BTRY))
+		return 1;
+
 	int r, rx, ry, trade;
 	for (rx=-2; rx<3; rx++)
 		for (ry=-2; ry<3; ry++)

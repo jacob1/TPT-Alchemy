@@ -41,8 +41,14 @@ Element_SMKE::Element_SMKE()
 	HighTemperature = 625.0f;
 	HighTemperatureTransition = PT_FIRE;
 
-	Update = NULL;
+	Update = &Element_SMKE::update;
 	Graphics = &Element_SMKE::graphics;
+}
+
+//#TPT-Directive ElementHeader Element_SMKE static int update(UPDATE_FUNC_ARGS)
+int Element_SMKE::update(UPDATE_FUNC_ARGS)
+{
+	return Element_ETRD::craft_with(UPDATE_FUNC_SUBCALL_ARGS, PT_BIZRS, PT_MORT);
 }
 
 //#TPT-Directive ElementHeader Element_SMKE static int graphics(GRAPHICS_FUNC_ARGS)

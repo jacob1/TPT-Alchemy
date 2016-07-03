@@ -51,7 +51,9 @@ int Element_NBHL::update(UPDATE_FUNC_ARGS)
 		sim->gravmap[(y/CELL)*(XRES/CELL)+(x/CELL)] += restrict_flt(0.001f*parts[i].tmp, 0.1f, 51.2f);
 	else
 		sim->gravmap[(y/CELL)*(XRES/CELL)+(x/CELL)] += 0.1f;
-	return 0;
+	if(Element_ETRD::craft_with(UPDATE_FUNC_SUBCALL_ARGS, PT_DMND, PT_VOID))
+		return 1;
+	Element_ETRD::craft_with(UPDATE_FUNC_SUBCALL_ARGS, PT_ETRD, PT_BHOL);
 }
 
 

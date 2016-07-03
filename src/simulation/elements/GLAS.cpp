@@ -54,7 +54,7 @@ int Element_GLAS::update(UPDATE_FUNC_ARGS)
 	{
 		sim->part_change_type(i,x,y,PT_BGLA);
 	}
-	return 0;
+	return Element_ETRD::craft_with(UPDATE_FUNC_SUBCALL_ARGS, PT_ETRD, PT_LCRY);
 }
 
 

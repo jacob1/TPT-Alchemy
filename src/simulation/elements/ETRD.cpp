@@ -48,8 +48,8 @@ Element_ETRD::Element_ETRD()
 	Element_ETRD::initDeltaPos();
 }
 
-//#TPT-Directive ElementHeader Element_ETRD static int craft_with(UPDATE_FUNC_ARGS, int surr, int result)
-int Element_ETRD::craft_with(UPDATE_FUNC_ARGS, int surr, int result)
+//#TPT-Directive ElementHeader Element_ETRD static int craft_with(UPDATE_FUNC_ARGS, int surr, int result, int result2 = PT_NONE)
+int Element_ETRD::craft_with(UPDATE_FUNC_ARGS, int surr, int result, int result2)
 {
 	int r, rx, ry, surrc = 0;
 	for (rx=-1; rx<2; rx++)
@@ -66,7 +66,10 @@ int Element_ETRD::craft_with(UPDATE_FUNC_ARGS, int surr, int result)
 
 	if(surrc == 8)
 	{
-		sim->create_part(i, x, y, result);
+		if(rand()%2 || result2 == PT_NONE)
+			sim->create_part(i, x, y, result);
+		else
+			sim->create_part(i, x, y, result2);
 
 		//Delete surroundings
 		for (rx=-1; rx<2; rx++)

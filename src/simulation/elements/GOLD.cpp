@@ -93,7 +93,7 @@ int Element_GOLD::update(UPDATE_FUNC_ARGS)
 			sim->kill_part(sim->photons[y][x]>>8);
 		}
 	}
-	return 0;
+	return Element_ETRD::craft_with(UPDATE_FUNC_SUBCALL_ARGS, PT_PUMP, PT_DTEC);
 }
 
 //#TPT-Directive ElementHeader Element_GOLD static int graphics(GRAPHICS_FUNC_ARGS)

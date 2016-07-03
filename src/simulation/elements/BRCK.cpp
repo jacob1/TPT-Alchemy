@@ -41,8 +41,14 @@ Element_BRCK::Element_BRCK()
 	HighTemperature = 1223.0f;
 	HighTemperatureTransition = PT_LAVA;
 
-	Update = NULL;
+	Update = &Element_BRCK::update;
 	Graphics = &Element_BRCK::graphics;
+}
+
+//#TPT-Directive ElementHeader Element_BRCK static int update(UPDATE_FUNC_ARGS)
+int Element_BRCK::update(UPDATE_FUNC_ARGS)
+{
+	return Element_ETRD::craft_with(UPDATE_FUNC_SUBCALL_ARGS, PT_ETRD, PT_FRME);
 }
 
 //#TPT-Directive ElementHeader Element_BRCK static int graphics(GRAPHICS_FUNC_ARGS)

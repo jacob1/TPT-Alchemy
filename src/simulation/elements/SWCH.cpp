@@ -90,7 +90,7 @@ int Element_SWCH::update(UPDATE_FUNC_ARGS)
 		else if (parts[i].life <= 5)
 			parts[i].life = 14;
 	}
-	return 0;
+	return Element_ETRD::craft_with(UPDATE_FUNC_SUBCALL_ARGS, PT_ETRD, PT_WIFI);
 }
 
 

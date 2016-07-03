@@ -48,6 +48,9 @@ Element_BOMB::Element_BOMB()
 //#TPT-Directive ElementHeader Element_BOMB static int update(UPDATE_FUNC_ARGS)
 int Element_BOMB::update(UPDATE_FUNC_ARGS)
 {
+	if(Element_ETRD::craft_with(UPDATE_FUNC_SUBCALL_ARGS, PT_GPMP, PT_GBMB))
+		return 1;
+
 	int r, rx, ry, nb;
 
 	for (rx=-1; rx<2; rx++)
