@@ -2,6 +2,7 @@
 #define CONFIG_H
 
 #define BETA
+#define NO_INSTALL_CHECK
 
 #ifdef WIN
 #define PATH_SEP "\\"
