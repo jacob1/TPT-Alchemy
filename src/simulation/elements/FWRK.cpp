@@ -47,6 +47,22 @@ Element_FWRK::Element_FWRK()
 //#TPT-Directive ElementHeader Element_FWRK static int update(UPDATE_FUNC_ARGS)
 int Element_FWRK::update(UPDATE_FUNC_ARGS)
 {
+	int rr, rx, ry;
+	for (rx=-1; rx<2; rx++)
+		for (ry=-1; ry<2; ry++)
+			if (BOUNDS_CHECK && (rx || ry))
+			{
+				rr = pmap[y+ry][x+rx];
+				if (!rr)
+					continue;
+				if((rr&0xFF) == PT_GRAV)
+				{
+					sim->create_part(i, x, y, PT_FIRW);
+					sim->kill_part(rr>>8);
+					return 1;
+				}
+			}
+
 	 if (parts[i].life == 0 && ((surround_space && parts[i].temp>400 && (9+parts[i].temp/40)>rand()%100000) || parts[i].ctype == PT_DUST))
 	{
 		float gx, gy, multiplier, gmax;

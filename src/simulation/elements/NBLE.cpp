@@ -86,6 +86,23 @@ int Element_NBLE::update(UPDATE_FUNC_ARGS)
 			sim->pv[y/CELL][x/CELL] += 50;
 		}
 	}
+
+	int r, rx, ry ;
+	for (rx=-1; rx<2; rx++)
+		for (ry=-1; ry<2; ry++)
+			if (BOUNDS_CHECK && (rx || ry))
+			{
+				r = pmap[y+ry][x+rx];
+				if (!r)
+					continue;
+				if((r&0xFF) == PT_DUST)
+				{
+					sim->create_part(i, x, y, PT_ANAR);
+					sim->kill_part(r>>8);
+					return 1;
+				}
+			}
+
 	return 0;
 }
 

@@ -71,6 +71,28 @@ int Element_LAVA::update(UPDATE_FUNC_ARGS)
 								parts[i].ctype = PT_TTAN;
 								sim->kill_part(r>>8);
 							}
+							else if((r&0xFF) == PT_LAVA && parts[r>>8].ctype == PT_NSCN)
+							{
+								parts[i].ctype = PT_NTCT;
+								sim->kill_part(r>>8);
+							}
+							else if((r&0xFF) == PT_LAVA && parts[r>>8].ctype == PT_PSCN)
+							{
+								parts[i].ctype = PT_PTCT;
+								sim->kill_part(r>>8);
+							}
+							else if((r&0xFF) == PT_LAVA && parts[r>>8].ctype == PT_IRON)
+							{
+								parts[i].ctype = PT_TUNG;
+								sim->kill_part(r>>8);
+							}
+							break;
+						case PT_METL:
+							if((r&0xFF) == PT_MWAX)
+							{
+								parts[i].ctype = PT_INWR;
+								sim->kill_part(r>>8);
+							}
 							break;
 						case PT_GLAS:
 							if((r&0xFF) == PT_SAND)

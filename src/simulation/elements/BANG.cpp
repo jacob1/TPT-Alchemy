@@ -64,6 +64,12 @@ int Element_BANG::update(UPDATE_FUNC_ARGS)
 						{
 							parts[i].tmp = 1;
 						}
+						else if ((r&0xFF) == PT_LNTG)
+						{
+							sim->create_part(i, x, y, PT_C5);
+							sim->kill_part(r>>8);
+							return 1;
+						}
 					}
 
 	}

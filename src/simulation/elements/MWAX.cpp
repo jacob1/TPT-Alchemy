@@ -41,7 +41,29 @@ Element_MWAX::Element_MWAX()
 	HighTemperature = 673.0f;
 	HighTemperatureTransition = PT_FIRE;
 
-	Update = NULL;
+	Update = &Element_MWAX::update;
+}
+
+//#TPT-Directive ElementHeader Element_MWAX static int update(UPDATE_FUNC_ARGS)
+int Element_MWAX::update(UPDATE_FUNC_ARGS)
+{
+	int r, rx, ry ;
+	for (rx=-1; rx<2; rx++)
+		for (ry=-1; ry<2; ry++)
+			if (BOUNDS_CHECK && (rx || ry))
+			{
+				r = pmap[y+ry][x+rx];
+				if (!r)
+					continue;
+
+				if((r&0xFF) == PT_NITR)
+				{
+					sim->create_part(i, x, y, PT_PLEX);
+					sim->kill_part(r>>8);
+					return 1;
+				}
+			}
+	return 0;
 }
 
 Element_MWAX::~Element_MWAX() {}

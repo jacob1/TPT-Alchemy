@@ -64,6 +64,13 @@ int Element_PLNT::update(UPDATE_FUNC_ARGS)
 						parts[np].life = 0;
 					}
 					break;
+				case PT_DSTW:
+					if(parts[i].temp >= 80 + O_CELS)
+					{
+						sim->create_part(i, x, y, PT_YEST);
+						sim->kill_part(r>>8);
+						return 1;
+					}
 				case PT_LAVA:
 					if (!(rand()%50))
 					{
