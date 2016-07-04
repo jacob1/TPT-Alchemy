@@ -73,7 +73,7 @@ private:
 	bool colourSelector;
 	ui::Colour colour;
 
-	std::vector<Achievement*> achievements;
+	std::vector<unsigned int> achievements;
 
 	int edgeMode;
 
@@ -192,7 +192,7 @@ public:
 	ui::Point GetZoomWindowPosition();
 	void SetClipboard(GameSave * save);
 	void SetPlaceSave(GameSave * save);
-	void CheckAchievement(Achievement* achievement);
+	void CheckAchievement(unsigned int achievementID);
 	void CheckAchievements();
 	void Log(string message, bool printToFile);
 	deque<string> GetLog();

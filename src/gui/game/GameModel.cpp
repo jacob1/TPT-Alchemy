@@ -19,6 +19,8 @@
 #include "Format.h"
 #include "Favorite.h"
 
+#include <algorithm>
+
 GameModel::GameModel():
 	clipboard(NULL),
 	placeSave(NULL),
@@ -96,7 +98,7 @@ GameModel::GameModel():
 	if(tempArray.size())
 	{
 		for(size_t i = 0; i < tempArray.size(); i++) {
-			achievements.push_back(Achievements[i]);
+			achievements.push_back(i);
 		}
 	}
 
@@ -176,6 +178,8 @@ GameModel::~GameModel()
 	Client::Ref().SetPref("Simulation.PrettyPowder", sim->pretty_powder);
 
 	Client::Ref().SetPref("Simulation.ElementsAcquired", std::vector<Json::Value>(sim->elementsAcquired, sim->elementsAcquired + sizeof(sim->elementsAcquired)/sizeof(bool)));
+
+	Client::Ref().SetPref("Achievements", std::vector<Json::Value>(achievements.begin(), achievements.end()));
 
 	Client::Ref().SetPref("Decoration.Red", (int)colour.Red);
 	Client::Ref().SetPref("Decoration.Green", (int)colour.Green);
@@ -1000,19 +1004,20 @@ GameSave * GameModel::GetPlaceSave()
 	return placeSave;
 }
 
-void GameModel::CheckAchievement(Achievement* achievement) {
+void GameModel::CheckAchievement(unsigned int achievementID) {
 	std::stringstream message;
+	Achievement* achievement = Achievements[achievementID];
 
-        if (achievement->checkCompletion(sim)) {
+        if (achievement->checkCompletion(sim) && std::find(achievements.begin(), achievements.end(), achievementID) == achievements.end()) {
 		message << "Achievement get!\n" << achievement->title << "\n\n" << achievement->text;
 		Log(message.str(), false);
-                achievements.push_back(achievement);
+                achievements.push_back(achievementID);
 	}
 }
 
 void GameModel::CheckAchievements() {
-	for(int i=0; i<ACHEIVEMENT_TOTAL; i++)
-		CheckAchievement(Achievements[i]);
+	for(int i=0; i<ACHIEVEMENT_TOTAL; i++)
+		CheckAchievement(i);
 }
 
 void GameModel::Log(string message, bool printToFile)
