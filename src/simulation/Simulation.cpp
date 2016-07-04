@@ -5087,6 +5087,7 @@ void Simulation::ElementAcquired(int type)
 		GetGameController()->GetModel()->BuildMenus();
 		messageStream << "New element found: " << elements[type].Name << "!";
 		GetGameController()->GetModel()->Log(messageStream.str(), false);
+		GetGameController()->GetModel()->CheckAchievements();
 	}
 }
 

@@ -91,6 +91,15 @@ GameModel::GameModel():
 		}
 	}
 
+	tempArray = Client::Ref().GetPrefUIntegerArray("Achievements");
+
+	if(tempArray.size())
+	{
+		for(size_t i = 0; i < tempArray.size(); i++) {
+			achievements.push_back(Achievements[i]);
+		}
+	}
+
 	//Load favorites
 	std::vector<std::string> favoritesList = Client::Ref().GetPrefStringArray("Favorites");
 
@@ -991,11 +1000,19 @@ GameSave * GameModel::GetPlaceSave()
 	return placeSave;
 }
 
-void GameModel::CheckAcheivement(Acheivement acheivement) {
-        // TODO display a message
+void GameModel::CheckAchievement(Achievement* achievement) {
+	std::stringstream message;
 
-        if (acheivement.checkCompletion(sim))
-                acheivements.push_back(acheivement);
+        if (achievement->checkCompletion(sim)) {
+		message << "Achievement get!\n" << achievement->title << "\n\n" << achievement->text;
+		Log(message.str(), false);
+                achievements.push_back(achievement);
+	}
+}
+
+void GameModel::CheckAchievements() {
+	for(int i=0; i<ACHEIVEMENT_TOTAL; i++)
+		CheckAchievement(Achievements[i]);
 }
 
 void GameModel::Log(string message, bool printToFile)

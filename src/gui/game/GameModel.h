@@ -16,7 +16,7 @@
 #include "Tool.h"
 #include "Menu.h"
 
-#include "gui/game/Acheivement.h"
+#include "gui/game/Achievement.h"
 
 using namespace std;
 
@@ -73,7 +73,7 @@ private:
 	bool colourSelector;
 	ui::Colour colour;
 
-	std::vector<Acheivement> acheivements;
+	std::vector<Achievement*> achievements;
 
 	int edgeMode;
 
@@ -192,7 +192,8 @@ public:
 	ui::Point GetZoomWindowPosition();
 	void SetClipboard(GameSave * save);
 	void SetPlaceSave(GameSave * save);
-	void CheckAcheivement(Acheivement acheivement);
+	void CheckAchievement(Achievement* achievement);
+	void CheckAchievements();
 	void Log(string message, bool printToFile);
 	deque<string> GetLog();
 	GameSave * GetClipboard();
