@@ -15,6 +15,8 @@ BasicAchievement::BasicAchievement() {
 	requiredElements.push_back(PT_IRON);
 	requiredElements.push_back(PT_SALT);
 	requiredElements.push_back(PT_DSTW);
+	requiredElements.push_back(PT_PLSM);
+	requiredElements.push_back(PT_DUST);
 }
 
 DiamondAchievement::DiamondAchievement() {
