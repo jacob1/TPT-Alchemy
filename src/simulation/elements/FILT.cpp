@@ -41,8 +41,14 @@ Element_FILT::Element_FILT()
 	HighTemperature = ITH;
 	HighTemperatureTransition = NT;
 
-	Update = NULL;
+	Update = &Element_FILT::update;
 	Graphics = &Element_FILT::graphics;
+}
+
+//#TPT-Directive ElementHeader Element_FILT static int update(UPDATE_FUNC_ARGS)
+int Element_FILT::update(UPDATE_FUNC_ARGS)
+{
+	return Element_ETRD::craft_with(UPDATE_FUNC_SUBCALL_ARGS, PT_ETRD, PT_HSWC);
 }
 
 //#TPT-Directive ElementHeader Element_FILT static int graphics(GRAPHICS_FUNC_ARGS)

@@ -43,9 +43,57 @@ Element_ETRD::Element_ETRD()
 	HighTemperature = ITH;
 	HighTemperatureTransition = NT;
 
-	Update = NULL;
+	Update = &Element_ETRD::update;
 
 	Element_ETRD::initDeltaPos();
+}
+
+//#TPT-Directive ElementHeader Element_ETRD static int craft_with(UPDATE_FUNC_ARGS, int surr, int result, int result2 = PT_NONE)
+int Element_ETRD::craft_with(UPDATE_FUNC_ARGS, int surr, int result, int result2)
+{
+	int r, rx, ry, surrc = 0;
+	for (rx=-1; rx<2; rx++)
+		for (ry=-1; ry<2; ry++)
+			if (BOUNDS_CHECK && (rx || ry))
+			{
+				r = pmap[y+ry][x+rx];
+				if (!r)
+					continue;
+
+				if((r&0xFF) == surr)
+					surrc++;
+			}
+
+	if(surrc == 8)
+	{
+		if(rand()%2 || result2 == PT_NONE)
+			sim->create_part(i, x, y, result);
+		else
+			sim->create_part(i, x, y, result2);
+
+		//Delete surroundings
+		for (rx=-1; rx<2; rx++)
+			for (ry=-1; ry<2; ry++)
+				if (BOUNDS_CHECK && (rx || ry))
+				{
+					r = pmap[y+ry][x+rx];
+					if (!r)
+						continue;
+
+					if((r&0xFF) == surr)
+						sim->kill_part(r>>8);
+				}
+
+		return 1;
+	}
+
+	return 0;
+}
+
+//#TPT-Directive ElementHeader Element_ETRD static int update(UPDATE_FUNC_ARGS)
+int Element_ETRD::update(UPDATE_FUNC_ARGS)
+{
+	return craft_with(UPDATE_FUNC_SUBCALL_ARGS, PT_INST, PT_TESC);
 }
 
 class ETRD_deltaWithLength

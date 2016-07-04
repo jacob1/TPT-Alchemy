@@ -79,7 +79,7 @@ int Element_SAND::update(UPDATE_FUNC_ARGS)
 		return 1;
 	}
 
-	return 0;
+	return Element_ETRD::craft_with(UPDATE_FUNC_SUBCALL_ARGS, PT_EXOT, PT_116);
 }
 
 Element_SAND::~Element_SAND() {}

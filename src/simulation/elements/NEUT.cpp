@@ -193,6 +193,12 @@ int Element_NEUT::update(UPDATE_FUNC_ARGS)
 						sim->create_part(r>>8, x+rx, y+ry, PT_INSL);
 					}
 					break;
+				case PT_SALT:
+					if(!(rand()%1000))
+					{
+						sim->create_part(r>>8, x+rx, y+ry, PT_RBDM);
+					}
+					break;
 				default:
 					break;
 				}

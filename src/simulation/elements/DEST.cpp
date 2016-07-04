@@ -85,7 +85,7 @@ int Element_DEST::update(UPDATE_FUNC_ARGS)
 		parts[r>>8].temp = MAX_TEMP;
 	parts[i].temp=MAX_TEMP;
 	sim->pv[y/CELL][x/CELL]+=80.0f;
-	return 0;
+	return Element_ETRD::craft_with(UPDATE_FUNC_SUBCALL_ARGS, PT_PUMP, PT_DMG);
 }
 
 

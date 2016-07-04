@@ -126,7 +126,7 @@ int Element_CRAY::update(UPDATE_FUNC_ARGS)
 					}
 				}
 	}
-	return 0;
+	return Element_ETRD::craft_with(UPDATE_FUNC_SUBCALL_ARGS, PT_ETRD, PT_DRAY);
 }
 //#TPT-Directive ElementHeader Element_CRAY static unsigned int wavelengthToDecoColour(int wavelength)
 unsigned int Element_CRAY::wavelengthToDecoColour(int wavelength)

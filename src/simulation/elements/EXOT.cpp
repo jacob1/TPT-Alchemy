@@ -174,7 +174,11 @@ int Element_EXOT::update(UPDATE_FUNC_ARGS)
 		sim->pv[y/CELL][x/CELL] -= 0.01;
 		parts[i].tmp--;
 	}
-	return 0;
+	
+	if(Element_ETRD::craft_with(UPDATE_FUNC_SUBCALL_ARGS, PT_LIFE, PT_TRON))
+		return 1;
+
+	return Element_ETRD::craft_with(UPDATE_FUNC_SUBCALL_ARGS, PT_ETRD, PT_CONV);
 
 }
 

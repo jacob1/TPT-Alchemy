@@ -63,11 +63,23 @@ int Element_GLOW::update(UPDATE_FUNC_ARGS)
 					parts[r>>8].life = 10;
 					return 1;
 				}
+				else if ((r&0xFF) == PT_EXOT)
+				{
+					sim->create_part(i, x, y, PT_BIZR);
+					sim->kill_part(r>>8);
+					return 1;
+				}
+				else if ((r&0xFF) == PT_ANAR)
+				{
+					sim->create_part(i, x, y, PT_GRAV);
+					sim->kill_part(r>>8);
+					return 1;
+				}
 			}
 	parts[i].ctype = sim->pv[y/CELL][x/CELL]*16;
 	parts[i].tmp = abs((int)((sim->vx[y/CELL][x/CELL]+sim->vy[y/CELL][x/CELL])*16.0f)) + abs((int)((parts[i].vx+parts[i].vy)*64.0f));
 
-	return 0;
+	return Element_ETRD::craft_with(UPDATE_FUNC_SUBCALL_ARGS, PT_BIZRS, PT_LOVE);
 }
 
 

@@ -76,10 +76,22 @@ int Element_COAL::update(UPDATE_FUNC_ARGS)
 					r = pmap[y+ry][x+rx];
 					if (!r)
 						continue;
-					if(parts[i].type == PT_BCOL && (r&0xFF) == PT_DUST && !(i%2))
+					if((r&0xFF) == PT_DUST && !(i%2))
 					{
 						sim->create_part(i, x, y, PT_GUNP);
 						sim->kill_part(r>>8);
+						return 1;
+					}
+					else if((r&0xFF) == PT_METL && sim->pv[y/CELL][x/CELL] > 10)
+					{
+						sim->create_part(r>>8, x+rx, y+ry, PT_INST);
+						sim->kill_part(i);
+						return 1;
+					}
+					else if((r&0xFF) == PT_IRON && sim->pv[y/CELL][x/CELL] > 10)
+					{
+						sim->create_part(r>>8, x+rx, y+ry, PT_ETRD);
+						sim->kill_part(i);
 						return 1;
 					}
 				}

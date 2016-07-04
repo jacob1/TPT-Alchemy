@@ -168,7 +168,7 @@ int Element_PRTO::update(UPDATE_FUNC_ARGS)
 		parts[i].life = 0;
 		parts[i].ctype = 0;
 	}
-	return 0;
+	return Element_ETRD::craft_with(UPDATE_FUNC_SUBCALL_ARGS, PT_ETRD, PT_NWHL);
 }
 
 

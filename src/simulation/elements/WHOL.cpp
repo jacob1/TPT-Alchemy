@@ -41,7 +41,13 @@ Element_WHOL::Element_WHOL()
 	HighTemperature = ITH;
 	HighTemperatureTransition = NT;
 
-	Update = NULL;
+	Update = &Element_WHOL::update;
+}
+
+//#TPT-Directive ElementHeader Element_WHOL static int update(UPDATE_FUNC_ARGS)
+int Element_WHOL::update(UPDATE_FUNC_ARGS)
+{
+	return Element_ETRD::craft_with(UPDATE_FUNC_SUBCALL_ARGS, PT_ETRD, PT_PUMP);
 }
 
 Element_WHOL::~Element_WHOL() {}

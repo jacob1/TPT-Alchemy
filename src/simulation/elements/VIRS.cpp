@@ -48,6 +48,17 @@ Element_VIRS::Element_VIRS()
 //#TPT-Directive ElementHeader Element_VIRS static int update(UPDATE_FUNC_ARGS)
 int Element_VIRS::update(UPDATE_FUNC_ARGS)
 {
+	if(parts[i].type == PT_VRSS)
+	{
+		if(Element_ETRD::craft_with(UPDATE_FUNC_SUBCALL_ARGS, PT_ETRD, PT_CLNE))
+			return 1;
+	}
+	else
+	{
+		if(Element_ETRD::craft_with(UPDATE_FUNC_SUBCALL_ARGS, PT_ETRD, PT_BCLN))
+			return 1;
+	}
+
 	//pavg[0] measures how many frames until it is cured (0 if still actively spreading and not being cured)
 	//pavg[1] measures how many frames until it dies
 	int r, rx, ry, rndstore = rand();

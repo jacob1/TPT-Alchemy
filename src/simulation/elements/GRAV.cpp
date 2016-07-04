@@ -41,9 +41,16 @@ Element_GRAV::Element_GRAV()
 	HighTemperature = ITH;
 	HighTemperatureTransition = NT;
 
-	Update = NULL;
+	Update = &Element_GRAV::update;
 	Graphics = &Element_GRAV::graphics;
 }
+
+//#TPT-Directive ElementHeader Element_GRAV static int update(UPDATE_FUNC_ARGS)
+int Element_GRAV::update(UPDATE_FUNC_ARGS)
+{
+	return Element_ETRD::craft_with(UPDATE_FUNC_SUBCALL_ARGS, PT_ETRD, PT_GPMP);
+}
+
 //#TPT-Directive ElementHeader Element_GRAV static int graphics(GRAPHICS_FUNC_ARGS)
 int Element_GRAV::graphics(GRAPHICS_FUNC_ARGS)
 

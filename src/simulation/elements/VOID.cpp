@@ -41,7 +41,13 @@ Element_VOID::Element_VOID()
 	HighTemperature = ITH;
 	HighTemperatureTransition = NT;
 
-	Update = NULL;
+	Update = &Element_VOID::update;
+}
+
+//#TPT-Directive ElementHeader Element_VOID static int update(UPDATE_FUNC_ARGS)
+int Element_VOID::update(UPDATE_FUNC_ARGS)
+{
+	return Element_ETRD::craft_with(UPDATE_FUNC_SUBCALL_ARGS, PT_ETRD, PT_PVOD);
 }
 
 Element_VOID::~Element_VOID() {}

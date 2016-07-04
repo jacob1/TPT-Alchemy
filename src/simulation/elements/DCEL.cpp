@@ -71,7 +71,7 @@ int Element_DCEL::update(UPDATE_FUNC_ARGS)
 					parts[i].tmp = 1;
 				}
 			}
-	return 0;
+	return Element_ETRD::craft_with(UPDATE_FUNC_SUBCALL_ARGS, PT_ETRD, PT_ACEL);
 }
 
 

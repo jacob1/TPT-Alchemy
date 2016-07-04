@@ -93,6 +93,18 @@ int Element_PROT::update(UPDATE_FUNC_ARGS)
 		else change = 0.0f;
 		parts[under>>8].temp = restrict_flt(parts[under>>8].temp + change, MIN_TEMP, MAX_TEMP);
 		break;
+	case PT_PLNT:
+		if(!((under>>8)%100))
+			sim->create_part(under>>8, x, y, PT_VIRS);
+		break;
+	case PT_SNOW:
+		if(!((under>>8)%100))
+			sim->create_part(under>>8, x, y, PT_FRZZ);
+		break;
+	case PT_BANG:
+		if(!(rand()%100))
+			sim->create_part(under>>8, x, y, PT_BOMB);
+		break;
 	case PT_NONE:
 		//slowly kill if it's not inside an element
 		if (parts[i].life)

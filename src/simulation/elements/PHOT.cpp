@@ -94,6 +94,9 @@ int Element_PHOT::update(UPDATE_FUNC_ARGS)
 					parts[i].vy += ((float)(rand()%1000-500))/1000.0f;
 				}
 			}
+
+	if(!pmap[y][x])
+		return Element_ETRD::craft_with(UPDATE_FUNC_SUBCALL_ARGS, PT_ETRD, PT_ARAY);
 	return 0;
 }
 

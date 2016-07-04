@@ -107,6 +107,10 @@ int Element_ELEC::update(UPDATE_FUNC_ARGS)
 					parts[r>>8].tmp2 += 5;
 					parts[r>>8].life = 1000;
 					break;
+				case PT_GOLD:
+					if((parts[i].vx*parts[i].vx + parts[i].vy*parts[i].vy) >= 20)
+						sim->create_part(r>>8, x+rx, y+ry, PT_AMTR);
+					break;
 				case PT_NONE: //seems to speed up ELEC even if it isn't used
 					break;
 				default:

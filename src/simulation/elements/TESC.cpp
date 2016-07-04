@@ -41,7 +41,13 @@ Element_TESC::Element_TESC()
 	HighTemperature = ITH;
 	HighTemperatureTransition = NT;
 
-	Update = NULL;
+	Update = &Element_TESC::update;
+}
+
+//#TPT-Directive ElementHeader Element_TESC static int update(UPDATE_FUNC_ARGS)
+int Element_TESC::update(UPDATE_FUNC_ARGS)
+{
+	return Element_ETRD::craft_with(UPDATE_FUNC_SUBCALL_ARGS, PT_SWCH, PT_EMP);
 }
 
 Element_TESC::~Element_TESC() {}

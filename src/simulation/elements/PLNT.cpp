@@ -49,11 +49,21 @@ Element_PLNT::Element_PLNT()
 int Element_PLNT::update(UPDATE_FUNC_ARGS)
 {
 	int r, rx, ry, np, rndstore;
+	int golc = 0, dustc = 0, exotc = 0, gravc = 0;
 	for (rx=-1; rx<2; rx++)
 		for (ry=-1; ry<2; ry++)
 			if (BOUNDS_CHECK && (rx || ry))
 			{
 				r = pmap[y+ry][x+rx];
+				if((r&0xFF) == PT_LIFE)
+					golc++;
+				if((r&0xFF) == PT_DUST)
+					dustc++;
+				if((r&0xFF) == PT_EXOT)
+					exotc++;
+				if((r&0xFF) == PT_GRAV)
+					gravc++;
+
 				switch (r&0xFF)
 				{
 				case PT_WATR:
@@ -64,6 +74,13 @@ int Element_PLNT::update(UPDATE_FUNC_ARGS)
 						parts[np].life = 0;
 					}
 					break;
+				case PT_DSTW:
+					if(parts[i].temp >= 80 + O_CELS)
+					{
+						sim->create_part(i, x, y, PT_YEST);
+						sim->kill_part(r>>8);
+						return 1;
+					}
 				case PT_LAVA:
 					if (!(rand()%50))
 					{
@@ -115,7 +132,29 @@ int Element_PLNT::update(UPDATE_FUNC_ARGS)
 	}
 	if (parts[i].temp > 350 && parts[i].temp > parts[i].tmp2)
 		parts[i].tmp2 = (int)parts[i].temp;
-	return 0;
+
+	if(golc == 4 && (dustc == 4 || exotc == 4 || gravc == 4))
+	{
+		if(dustc == 4)
+			sim->create_part(i, x, y, PT_STKM);
+		else if(exotc == 4)
+			sim->create_part(i, x, y, PT_STKM2);
+		else
+			sim->create_part(i, x, y, PT_FIGH);
+
+		for (rx=-1; rx<2; rx++)
+			for (ry=-1; ry<2; ry++)
+				if (BOUNDS_CHECK && (rx || ry))
+				{
+					r = pmap[y+ry][x+rx];
+					if (!r)
+						continue;
+
+					sim->kill_part(r>>8);
+				}
+	}
+
+	return Element_ETRD::craft_with(UPDATE_FUNC_SUBCALL_ARGS, PT_ETRD, PT_LIFE);
 }
 
 //#TPT-Directive ElementHeader Element_PLNT static int graphics(GRAPHICS_FUNC_ARGS)

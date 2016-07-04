@@ -78,7 +78,7 @@ int Element_GPMP::update(UPDATE_FUNC_ARGS)
 					}
 				}
 	}
-	return 0;
+	return Element_ETRD::craft_with(UPDATE_FUNC_SUBCALL_ARGS, PT_PUMP, PT_RPEL);
 }
 
 
