@@ -1009,8 +1009,8 @@ void GameModel::CheckAchievement(unsigned int achievementID) {
 	Achievement* achievement = Achievements[achievementID];
 
         if (achievement->checkCompletion(sim) && std::find(achievements.begin(), achievements.end(), achievementID) == achievements.end()) {
-		message << "Achievement get!\n" << achievement->title << "\n\n" << achievement->text;
-		Log(message.str(), false);
+		message << "Achievement get!\n" << achievement->title << "\n" << achievement->text;
+		SetInfoTip(message.str());
                 achievements.push_back(achievementID);
 	}
 }
