@@ -81,7 +81,7 @@ int Element_LAVA::update(UPDATE_FUNC_ARGS)
 								parts[i].ctype = PT_PTCT;
 								sim->kill_part(r>>8);
 							}
-							else if((r&0xFF) == PT_LAVA && parts[r>>8].ctype == PT_IRON)
+							else if((r&0xFF) == PT_LAVA && parts[r>>8].ctype == PT_IRON && !(i%10))
 							{
 								parts[i].ctype = PT_TUNG;
 								sim->kill_part(r>>8);
