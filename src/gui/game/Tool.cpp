@@ -56,16 +56,20 @@ ElementTool::ElementTool(int id, string name, string description, int r, int g, 
 }
 ElementTool::~ElementTool() {}
 void ElementTool::Draw(Simulation * sim, Brush * brush, ui::Point position){
-	sim->CreateParts(position.X, position.Y, toolID, brush);
+	if (sim->elements[toolID].MenuVisible)
+		sim->CreateParts(position.X, position.Y, toolID, brush);
 }
 void ElementTool::DrawLine(Simulation * sim, Brush * brush, ui::Point position1, ui::Point position2, bool dragging) {
-	sim->CreateLine(position1.X, position1.Y, position2.X, position2.Y, toolID, brush);
+	if (sim->elements[toolID].MenuVisible)
+		sim->CreateLine(position1.X, position1.Y, position2.X, position2.Y, toolID, brush);
 }
 void ElementTool::DrawRect(Simulation * sim, Brush * brush, ui::Point position1, ui::Point position2) {
-	sim->CreateBox(position1.X, position1.Y, position2.X, position2.Y, toolID);
+	if (sim->elements[toolID].MenuVisible)
+		sim->CreateBox(position1.X, position1.Y, position2.X, position2.Y, toolID);
 }
 void ElementTool::DrawFill(Simulation * sim, Brush * brush, ui::Point position) {
-	sim->FloodParts(position.X, position.Y, toolID, -1);
+	if (sim->elements[toolID].MenuVisible)
+		sim->FloodParts(position.X, position.Y, toolID, -1);
 }
 
 
