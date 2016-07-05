@@ -98,9 +98,7 @@ GameModel::GameModel():
 
 	if(tempArray.size())
 	{
-		for(size_t i = 0; i < tempArray.size(); i++) {
-			achievements.push_back(i);
-		}
+		achievements = std::vector<unsigned int>(tempArray);
 	}
 
 	//Load favorites
