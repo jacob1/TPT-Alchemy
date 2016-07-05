@@ -11,12 +11,12 @@ bool Achievement::checkCompletion(Simulation * sim) {
 BasicAchievement::BasicAchievement() {
 	title = "First steps!";
 	text = "Congratulations, you made the first elements!";
-	requiredElements.push_back(PT_H2);
 	requiredElements.push_back(PT_IRON);
 	requiredElements.push_back(PT_SALT);
 	requiredElements.push_back(PT_DSTW);
-	requiredElements.push_back(PT_PLSM);
 	requiredElements.push_back(PT_DUST);
+	requiredElements.push_back(PT_SAND);
+	requiredElements.push_back(PT_LAVA);
 }
 
 DiamondAchievement::DiamondAchievement() {
@@ -87,7 +87,7 @@ NuclearAchievement::NuclearAchievement() {
         requiredElements.push_back(PT_NEUT);
 
 	title = "Science!";
-	text = "You found all the nuclear elements. But please be careful though :)";
+	text = "You found some of the radioactive elements. Please, be careful!";
 }
 
 ExotAchievement::ExotAchievement() {
@@ -100,7 +100,7 @@ StickmanAchievement::StickmanAchievement() {
 	requiredElements.push_back(PT_STKM);
 	requiredElements.push_back(PT_STKM2);
 	requiredElements.push_back(PT_FIGH);
-	title = "Hey!";
+	title = "Homunculus!";
 	text = "You got all the Stickmen!";
 }
 
@@ -108,7 +108,7 @@ PortalAchievement::PortalAchievement() {
 	requiredElements.push_back(PT_PRTI);
 	requiredElements.push_back(PT_PRTO);
 	title = "Woosh!";
-	text = "You have portals now.";
+	text = "Now you're thinking with portals.";
 }
 
 ExtraAchievement::ExtraAchievement() {
@@ -290,9 +290,68 @@ AllAchievement::AllAchievement() {
 	title = "Congratulations!";
 	text = "You have managed to get all the elements available!\n"
 	"Hereby, we note that you are officially considered to have completed this game.\n"
-	"Good luck and best wishes! Have fun!\n"
-	"\n"
-	"- \bosavask\bg, \boSopaXorzTaker\bg, \boand others\bg.";
+	"Good luck and best wishes! Have fun!";
 }
 
+SpecialAchievement::SpecialAchievement()
+{
+	title = "Special achievement!";
+	text = "You collected all \"special\" elements. Do you feel special now as well?";
+	requiredElements.push_back(PT_CLNE);
+	requiredElements.push_back(PT_VOID);
+	requiredElements.push_back(PT_DMND);
+	requiredElements.push_back(PT_WHOL);
+	requiredElements.push_back(PT_BHOL);
+	requiredElements.push_back(PT_NWHL);
+	requiredElements.push_back(PT_NBHL);
+	requiredElements.push_back(PT_STKM);
+	requiredElements.push_back(PT_STKM2);
+	requiredElements.push_back(PT_FIGH);
+	requiredElements.push_back(PT_CONV);
+	requiredElements.push_back(PT_BCLN);
+	requiredElements.push_back(PT_PRTI);
+	requiredElements.push_back(PT_PRTO);
+	requiredElements.push_back(PT_TRON);
+}
 
+GOLAchievement::GOLAchievement()
+{
+	title = "Game of life!";
+	text = "Our life is just a big cellular automata, right?";
+	requiredElements.push_back(PT_LIFE);
+}
+
+DelicateAchievement::DelicateAchievement()
+{
+	title = "Delicate work!";
+	text = "You made BOMB element. What a fine work!";
+	requiredElements.push_back(PT_BOMB);
+}
+
+AMTRAchievement::AMTRAchievement()
+{
+	title = "Antimatter!";
+	text = "You just collected antimatter - that's the real science.";
+	requiredElements.push_back(PT_AMTR);
+}
+
+CraftingAchievement::CraftingAchievement()
+{
+	title = "Crafting mechanisms!";
+	text = "You just crafted a tesla coil. One in the middle and eight around - what can be easier?";
+	requiredElements.push_back(PT_TESC);
+}
+
+YESTAchievement::YESTAchievement()
+{
+	title = "Brewing!";
+	text = "You just got YEST by brewing. Looks like someone is a quick cook!";
+	requiredElements.push_back(PT_YEST);
+}
+
+NITRAchievement::NITRAchievement()
+{
+	title = "Robinson Crusoe";
+	text = "You just made NITR out of household items. Please, don't blow yourself up!";
+	requiredElements.push_back(PT_NITR);
+}

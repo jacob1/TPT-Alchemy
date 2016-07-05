@@ -14,6 +14,7 @@
 #include "client/GameSave.h"
 #include "client/SaveFile.h"
 #include "gui/game/DecorationTool.h"
+#include "gui/dialogues/InformationMessage.h"
 #include "QuickOptions.h"
 #include "GameModelException.h"
 #include "Format.h"
@@ -1009,8 +1010,24 @@ void GameModel::CheckAchievement(unsigned int achievementID) {
 	Achievement* achievement = Achievements[achievementID];
 
         if (achievement->checkCompletion(sim) && std::find(achievements.begin(), achievements.end(), achievementID) == achievements.end()) {
-		message << "Achievement get!\n" << achievement->title << "\n" << achievement->text;
-		SetInfoTip(message.str());
+		message << "Achievement unlocked: " << achievement->title;
+
+		class AchievementNotification : public Notification
+		{
+			std::string achText;
+			std::string achTitle;
+			public:
+			AchievementNotification(std::string message, std::string achText_, std::string achTitle_) : 
+				Notification(message), achText(achText_), achTitle(achTitle_) {}
+			virtual ~AchievementNotification() {}
+
+			virtual void Action()
+			{
+				new InformationMessage(achTitle, achText, false);
+			}
+		};
+
+		AddNotification(new AchievementNotification(message.str(), achievement->text, achievement->title));
                 achievements.push_back(achievementID);
 	}
 }
