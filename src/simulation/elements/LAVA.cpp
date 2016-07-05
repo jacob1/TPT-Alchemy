@@ -95,7 +95,7 @@ int Element_LAVA::update(UPDATE_FUNC_ARGS)
 							}
 							break;
 						case PT_GLAS:
-							if((r&0xFF) == PT_SAND)
+							if(parts[i].temp >= 3000 && (r&0xFF) == PT_SAND)
 							{
 								parts[i].ctype = PT_QRTZ;
 								sim->kill_part(r>>8);
