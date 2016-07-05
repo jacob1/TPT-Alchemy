@@ -54,6 +54,7 @@ int Element_NBHL::update(UPDATE_FUNC_ARGS)
 	if(Element_ETRD::craft_with(UPDATE_FUNC_SUBCALL_ARGS, PT_DMND, PT_VOID))
 		return 1;
 	Element_ETRD::craft_with(UPDATE_FUNC_SUBCALL_ARGS, PT_ETRD, PT_BHOL);
+	return 0;
 }
 
 

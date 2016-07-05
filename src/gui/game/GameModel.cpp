@@ -1007,26 +1007,28 @@ void GameModel::CheckAchievement(unsigned int achievementID) {
 	std::stringstream message;
 	Achievement* achievement = Achievements[achievementID];
 
-        if (achievement->checkCompletion(sim) && std::find(achievements.begin(), achievements.end(), achievementID) == achievements.end()) {
+	if (achievement->checkCompletion(sim) && std::find(achievements.begin(), achievements.end(), achievementID) == achievements.end()) {
 		message << "Achievement unlocked: " << achievement->title;
 
 		class AchievementNotification : public Notification
 		{
 			std::string achText;
 			std::string achTitle;
-			public:
-			AchievementNotification(std::string message, std::string achText_, std::string achTitle_) : 
-				Notification(message), achText(achText_), achTitle(achTitle_) {}
+			GameModel * g;
+		public:
+			AchievementNotification(std::string message, std::string achText_, std::string achTitle_, GameModel * g) :
+				Notification(message), achText(achText_), achTitle(achTitle_), g(g) {}
 			virtual ~AchievementNotification() {}
 
 			virtual void Action()
 			{
 				new InformationMessage(achTitle, achText, false);
+				g->RemoveNotification(this);
 			}
 		};
 
-		AddNotification(new AchievementNotification(message.str(), achievement->text, achievement->title));
-                achievements.push_back(achievementID);
+		AddNotification(new AchievementNotification(message.str(), achievement->text, achievement->title, this));
+		achievements.push_back(achievementID);
 	}
 }
 
