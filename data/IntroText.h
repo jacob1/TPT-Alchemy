@@ -18,11 +18,10 @@ static const char *introTextData =
 	"Use 'P' to take a screenshot and save it into the current directory.\n"
 	"Use 'H' to toggle the HUD. Use 'D' to toggle debug mode in the HUD.\n"
 	"\n"
-	"Alchemy Mod made by \bgSkresanov Savely and SopaXorzTaker\n"
-	"\n"
 	"Contributors: \bgStanislaw K Skowronek (Designed the original Powder Toy),\n"
 	"\bgSimon Robertshaw, Skresanov Savely, cracker64, Catelite, Bryan Hoyle, Nathan Cousins, jacksonmj,\n"
 	"\bgFelix Wallin, Lieuwe Mosch, Anthony Boot, Matthew \"me4502\", MaksProg, jacob1, mniip\n"
+	"and SopaXorzTaker\n"
 	"\n"
 #ifndef BETA
 	"\bgTo use online features such as saving, you need to register at: \brhttp://powdertoy.co.uk/Register.html\n"
