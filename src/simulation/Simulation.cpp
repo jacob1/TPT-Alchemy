@@ -5182,7 +5182,7 @@ Simulation::Simulation():
 		else
 			elements[i] = Element();
 
-		elementsAcquired[i] = false;
+		elementsAcquired[i] = (i == PT_WATR) || (i == PT_STNE) || (i == PT_O2) || (i == PT_FIRE);
 	}
 	
 	tools = GetTools();
