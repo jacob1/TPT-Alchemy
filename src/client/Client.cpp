@@ -824,7 +824,7 @@ bool Client::CheckUpdate(void *updateRequest, bool checkSession)
 						}
 					}
 
-#if defined(SNAPSHOT) || MOD_ID > 0
+#if defined(SNAPSHOT) || (MOD_ID > 0 && SNAPSHOT_ID > 0)
 					Json::Value snapshotVersion = versions["Snapshot"];
 					int snapshotSnapshot = snapshotVersion["Snapshot"].asInt();
 					std::string snapshotFile = snapshotVersion["File"].asString();
