@@ -984,7 +984,6 @@ void GameModel::SetPlaceSave(GameSave * save)
 		else
 			placeSave = NULL;
 	}
-	sim->ignoreElementAcquistion = true;
 	notifyPlaceSaveChanged();
 }
 
