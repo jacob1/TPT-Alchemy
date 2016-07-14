@@ -194,6 +194,7 @@ public:
 	void SetPlaceSave(GameSave * save);
 	void CheckAchievement(unsigned int achievementID);
 	void CheckAchievements();
+	void ResetProgress();
 	void Log(string message, bool printToFile);
 	deque<string> GetLog();
 	GameSave * GetClipboard();

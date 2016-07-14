@@ -1038,6 +1038,15 @@ void GameModel::CheckAchievements() {
 		CheckAchievement(i);
 }
 
+void GameModel::ResetProgress() {
+	achievements.clear();
+	for(int i=0; i<PT_NUM; i++)
+		sim->elementsAcquired[i] = false;
+
+	// TODO maybe restart instead?
+	ui::Engine::Ref().Exit();
+}
+
 void GameModel::Log(string message, bool printToFile)
 {
 	consoleLog.push_front(message);
